@@ -1,6 +1,6 @@
 # CSE111 - Programming Language II
 
-Welcome to the repository for the Summer 2024 semester of CSE111 - Programming Language II. This repository serves as a comprehensive resource for all course-related materials, including assignments, laboratory work, quizzes, and exercise solutions.
+Welcome to the repository for the Summer 2024 semester of CSE111 - Programming Language II. This repository serves as a comprehensive resource for all course-related materials, including lab-assignments, quizzes, and exercise solutions.
 
 ## Content Structure
 
