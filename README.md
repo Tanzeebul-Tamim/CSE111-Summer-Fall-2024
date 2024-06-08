@@ -24,5 +24,5 @@ This repository contains files in Java (*.java) format, as the course curriculum
 To clone this repository to your local machine, use the following command:
 
 ```sh
-git clone https://github.com/Tanzeebul-Tamim/CSE111.git
+git clone https://github.com/Tanzeebul-Tamim/CSE111-Summer-2024.git
 ```
