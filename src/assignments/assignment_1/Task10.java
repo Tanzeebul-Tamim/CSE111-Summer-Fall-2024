@@ -11,12 +11,14 @@ public class Task10 {
 
         scanner.close();
 
-        if ((userInput % 2 == 0 && userInput % 5 != 0) || (userInput % 2 != 0 && userInput % 5 == 0)) {
-            System.out.println(userInput);
-        } else if (userInput % 2 == 0 && userInput % 5 == 0) {
+        if (userInput % 2 == 0 && userInput % 5 == 0) {
             System.out.println("Multiple of 2 and 5 both");
         } else {
-            System.out.println("Not a multiple we want");
+            if (userInput % 2 == 0 || userInput % 5 == 0) {
+                System.out.println(userInput);
+            } else {
+                System.out.println("Not a multiple we want");
+            }
         }
     }
 }

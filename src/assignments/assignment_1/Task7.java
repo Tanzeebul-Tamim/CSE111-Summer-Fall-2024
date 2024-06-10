@@ -11,12 +11,14 @@ public class Task7 {
 
         if (userInput % 5 == 0 && userInput % 7 == 0) {
             System.out.println("\nDivisible by Both");
-        } else if (userInput % 5 == 0 && userInput % 7 != 0) {
-            System.out.println("\nInvalid: Divisible by 5 Only");
-        } else if (userInput % 5 != 0 && userInput % 7 == 0) {
-            System.out.println("\nInvalid: Divisible by 7 Only");
         } else {
-            System.out.println("\nNo");
+            if (userInput % 5 == 0) {
+                System.out.println("\nInvalid: Divisible by 5 Only");
+            } else if (userInput % 7 == 0) {
+                System.out.println("\nInvalid: Divisible by 7 Only");
+            } else {
+                System.out.println("\nNo");
+            }
         }
 
         scanner.close();

@@ -81,9 +81,9 @@ public class Task1 {
         /* The addition operator concatenates the strings and combines them into a single string */
 
         /*
+        System.out.println("What if the first variable is an integer and the second is a String?");
             If the first variable is an integer and the second is a String or vice versa, the addition operator will convert the integer to a String first, and then concatenate the two Strings together. Here's an example:
         */
-        System.out.println("What if the first variable is an integer and the second is a String?");
         int i = 10;
         String j = " Good Morning";
         System.out.println(i + j);
