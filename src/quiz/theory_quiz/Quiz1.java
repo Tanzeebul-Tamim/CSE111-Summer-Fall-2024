@@ -1,4 +1,4 @@
-package theory_quiz;
+package quiz.theory_quiz;
 
 import java.util.Scanner;
 
