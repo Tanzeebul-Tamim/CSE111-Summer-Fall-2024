@@ -27,7 +27,7 @@ public class Quiz1 {
         int rate;
         if (deposit < 10000) {
             rate = 0;
-        } else if (deposit >= 1000 && deposit < 50000) {
+        } else if (deposit >= 10000 && deposit < 50000) {
             rate = 8;
         } else if (deposit >= 50000 && deposit < 100000) {
             rate = 10;
