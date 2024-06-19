@@ -32,6 +32,12 @@ public class Task10 {
 
         System.out.println("Enter the amount of money:");
         int amount = sc.nextInt();
+
+        while (amount <= 0) {
+            System.out.println("\nInvalid Input: The amount must be a positive integer!\nEnter a valid amount:");
+            amount = sc.nextInt();
+        }
+
         sc.close();
 
         int[] availableNotes = { 1, 5, 10, 50, 100, 500 };
