@@ -1,0 +1,531 @@
+// TASK 1
+public class Task1 {
+    public static void main(String[] args) {
+        // TASK A
+        System.out.println("TASK A");
+
+        int element = 2;
+        while (element <= 50) {
+            System.out.print(element);
+
+            if (element != 50) {
+                System.out.print(", ");
+            }
+
+            element += 4;
+        }
+
+        System.out.println();
+
+        // TASK B
+        System.out.println("\nTASK B");
+
+        int elem = 1;
+        int incrementBy = 2;
+        while (elem <= 120) {
+            System.out.print(elem);
+
+            if (elem != 120) {
+                System.out.print(", ");
+            }
+
+            elem += incrementBy;
+            incrementBy ++;
+        }
+
+        System.out.println();
+    }
+}
+
+// TASK 2
+public class Task2 {
+    public static void main(String[] args) {
+        int elem = 2;
+        boolean ascending = true;
+
+        while (true) {
+            System.out.print(elem);
+
+            if (!ascending && elem == 2) {
+                break;
+            }
+
+            System.out.print(", ");
+
+            if (ascending) {
+                elem += 2;
+
+                if (elem > 20) {
+                    ascending = false;
+                    elem -= 4;
+                }
+            } else {
+                elem -= 2;
+            }
+        }
+    }
+}
+
+// TASK 3
+import java.util.Scanner;
+
+public class Task3 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int sum = 0;
+        int min = 0;
+        int max = 0;
+        boolean isFirstInput = true;
+
+        for (int i = 0; i < 10; i++) {
+            if (i == 0) {
+                System.out.println("Enter an integer:");
+            } else {
+                System.out.println("\nEnter another integer:");
+            }
+
+            int userInput = sc.nextInt();
+            sum += userInput;
+
+            if (isFirstInput) {
+                min = userInput;
+                max = userInput;
+                isFirstInput = false;
+            } else {
+                if (userInput < min) {
+                    min = userInput;
+                }
+
+                if (userInput > max) {
+                    max = userInput;
+                }
+            }
+        }
+
+        float average = sum / 10f;
+
+        System.out.printf("\nSum = %d\n", sum);
+        System.out.printf("Minimum = %d\n", min);
+        System.out.printf("Maximum = %d\n", max);
+        System.out.printf("Average = %.1f", average);
+
+        sc.close();
+    }
+}
+
+// TASK 4
+import java.util.Scanner;
+
+public class Task4 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int[] inputs = new int[10];
+
+        for (int i = 0; i < 10; i++) {
+            if (i == 0) {
+                System.out.println("Enter an integer:");
+            } else {
+                System.out.println("\nEnter another integer:");
+            }
+
+            int userInput = sc.nextInt();
+
+            inputs[i] = userInput;
+        }
+
+        int sum = 0;
+        int count = 0;
+        int min = inputs[0];
+        int max = inputs[0];
+
+        for (int elem : inputs) {
+            if (elem > 0 && elem % 2 == 1) {
+                sum += elem;
+                count++;
+
+                if (elem < min) {
+                    min = elem;
+                }
+
+                if (elem > max) {
+                    max = elem;
+                }
+            }
+        }
+
+        if (count > 0) {
+            float average = sum / (float) count;
+
+            System.out.printf("\nSum = %d\n", sum);
+            System.out.printf("Minimum = %d\n", min);
+            System.out.printf("Maximum = %d\n", max);
+            System.out.printf("Average = %.1f", average);
+        } else {
+            System.out.println("\nNo odd positive numbers found");
+        }
+
+        sc.close();
+    }
+}
+
+// TASK 5
+import java.util.Scanner;
+
+public class Task5 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int sum = 0;
+        int zeroCounter = 0;
+        int count = 0;
+        int min = 0;
+        int max = 0;
+        boolean isFirstInput = true;
+
+        for (int i = 0; true; i++) {
+            if (i == 0) {
+                System.out.println("Enter an integer:");
+            } else {
+                System.out.println("\nEnter another integer:");
+            }
+
+            int userInput = sc.nextInt();
+
+            if (userInput == 0) {
+                zeroCounter++;
+            } else {
+                zeroCounter = 0;
+                sum += userInput;
+                count++;
+
+                if (isFirstInput) {
+                    min = userInput;
+                    max = userInput;
+                    isFirstInput = false;
+                } else {
+                    if (userInput < min) {
+                        min = userInput;
+                    }
+
+                    if (userInput > max) {
+                        max = userInput;
+                    }
+                }
+            }
+
+            if (zeroCounter == 3) {
+                break;
+            }
+        }
+
+        if (count > 0) {
+            double average = sum / (double) count;
+
+            System.out.printf("\nSum = %d\n", sum);
+            System.out.printf("Minimum = %d\n", min);
+            System.out.printf("Maximum = %d\n", max);
+            System.out.printf("Average = %.15f", average);
+        } else {
+            System.out.println("\nNo numbers found");
+        }
+
+        sc.close();
+    }
+}
+
+// TASK 6
+import java.util.Scanner;
+
+public class Task6 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        double sumOfWX = 0;
+        double sumOfW = 0;
+
+        for (int i = 0; i < 5; i++) {
+            if (i == 0) {
+                System.out.println("Enter a decimal number and its corresponding weight separated by a space:");
+            } else {
+                System.out.println("\nEnter another decimal number and its corresponding weight separated by a space:");
+            }
+
+            double x = sc.nextDouble();
+            double w = sc.nextDouble();
+            double wx = w * x;
+            
+            sumOfWX += wx;
+            sumOfW += w;
+        }
+
+        sc.close();
+        
+        double result = sumOfWX / sumOfW;
+
+        System.out.printf("\nWeighted Average = %.15f", result);
+    }
+}
+
+// TASK 7
+import java.util.Scanner;
+
+public class Task7 {
+    static int calculateTerm(int n) {
+        if (n <= 1) {
+            return n;
+        }
+
+        return calculateTerm(n - 1) + calculateTerm(n - 2);
+    }
+
+    // Print method for TASK A
+    static void printSequence(int n) {
+        for (int i = 1; true; i++) {
+            int term = calculateTerm(i);
+
+            if (term > n) {
+                break;
+            }
+
+            System.out.format("%d ", term);
+        }
+        System.out.println();
+    }
+
+    // Print method for TASK B
+    static void printSequenceWithSum(int n) {
+        int sum = 0;
+
+        for (int i = 1; true; i++) {
+            int term = calculateTerm(i);
+
+            if (term > n) {
+                break;
+            }
+
+            sum += term;
+
+            System.out.format("%d ", term);
+        }
+
+        System.out.printf("\nSum = %d", sum);
+        System.out.println();
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Executing TASK A
+        System.out.println("TASK A");
+        System.out.println("Enter the maximum number to display the Fibonacci sequence up to: ");
+        int n1 = sc.nextInt();
+
+        while (n1 <= 0) {
+            System.out.println("\nInvalid input! Please enter a positive number.");
+            n1 = sc.nextInt();
+        }
+
+        printSequence(n1);
+
+        System.out.println();
+
+        // Executing TASK B
+        System.out.println("TASK B");
+        System.out.println("Enter the maximum number to display the Fibonacci sequence up to along with their sum: ");
+        int n2 = sc.nextInt();
+
+        while (n2 <= 0) {
+            System.out.println("\nInvalid input! Please enter a positive number.");
+            n2 = sc.nextInt();
+        }
+
+        printSequenceWithSum(n2);
+
+        sc.close();
+    }
+}
+
+// TASK 8
+import java.util.Scanner;
+
+public class Task8 {
+    static boolean isPrime(int num) {
+        if (num <= 1) {
+            return false;
+        }
+
+        for (int i = 2; i <= (int) num / 2; i++) {
+            if (num % i == 0) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    static void countPrimes(int num1, int num2) {
+        int count = 0;
+
+        if (num1 > num2) {
+            int temp = num1;
+            num1 = num2;
+            num2 = temp;
+        }
+
+        for (int i = num1; i <= num2; i++) {
+            if (isPrime(i)) {
+                count++;
+            }
+        }
+
+        if (count == 0) {
+            System.out.format("\nThere aren't any prime numbers between %d and %d.", num1, num2);
+        } else if (count == 1) {
+            System.out.format("\nThere is only one prime number between %d and %d.", count, num1, num2);
+        } else {
+            System.out.format("\nThere are %d prime numbers between %d and %d.", count, num1, num2);
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter an integer:");
+        int num1 = sc.nextInt();
+
+        System.out.println("\nEnter another integer:");
+        int num2 = sc.nextInt();
+
+        sc.close();
+
+        countPrimes(num1, num2);
+    }
+}
+
+// TASK 9
+import java.util.Scanner;
+
+public class Task9 {
+    // Method for TASK A
+    static int getDigitCount(int num) {
+        int digitCount = 0;
+        while (num > 0) {
+            num /= 10;
+            digitCount ++;
+        }
+
+        return digitCount;
+    }
+
+    // Method for TASK B using method of TASK A
+    static void encryptInteger(int num) {
+        int digitCount = getDigitCount(num);
+
+        for (int i = digitCount; i >= 1; i--) {
+            int digit = num / (int) Math.pow(10, i - 1);
+            int encryptedDigit = digit * 7;
+            num %= (int) Math.pow(10, i - 1);
+            System.out.print(encryptedDigit + " ");
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Executing TASK A
+        System.out.println("TASK A");
+        System.out.println("Enter an integer:");
+        int userInput1 = sc.nextInt();        
+        System.out.printf("%d digits", getDigitCount(userInput1));
+
+        System.out.println("\n");
+
+        // Executing TASK B
+        System.out.println("TASK B");
+        System.out.println("Enter an integer:");
+        int userInput2 = sc.nextInt();
+        encryptInteger(userInput2);
+        
+        sc.close();
+    }
+}
+
+// TASK 10
+import java.util.Scanner;
+
+public class Task10 {
+    static void noteCounter(int amount, int... notes) {
+        for (int i = 0; i < notes.length; i++) {
+            for (int j = i + 1; j < notes.length; j++) {
+                if (notes[j] > notes[i]) {
+                    int temp = notes[i];
+                    notes[i] = notes[j];
+                    notes[j] = temp;
+                }
+            }
+        }
+
+        for (int note : notes) {
+            int noteCount = 0;
+
+            for (; amount >= note; amount -= note) {
+                noteCount++;
+            }
+
+            if (noteCount > 0) {
+                System.out.printf("%d %d's note\n", noteCount, note);
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter the amount of money:");
+        int amount = sc.nextInt();
+
+        while (amount <= 0) {
+            System.out.println("\nInvalid Input: The amount must be a positive integer!\nEnter a valid amount:");
+            amount = sc.nextInt();
+        }
+
+        sc.close();
+
+        int[] availableNotes = { 1, 5, 10, 50, 100, 500 };
+
+        noteCounter(amount, availableNotes);
+    }
+}
+
+// TASK 11
+import java.util.Scanner;
+
+public class Task11 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter an integer:");
+        int userInput = sc.nextInt();
+        sc.close();
+
+        // TASK A
+        for (int i = 0; i < userInput; i++) {
+            for (int j = 0; j < userInput; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
+        System.out.println();
+
+        // TASK B
+        for (int i = 0; i < userInput; i++) {
+            for (int j = 0; j <= i; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
