@@ -7,7 +7,19 @@ When a student leaves, the subsequent students in the array need to shift one po
 
 Write a method within the StudentIDManager class that performs this operation. The method should take an array of student IDs and the ID of the student who left, and then update the array accordingly. The array should maintain its original order except for the shifts caused by the removal.
 
+Additionally, if the ID to be removed is not present in the array, the method should print a message indicating that the ID is not found.
+
 Define the class StudentIDManager and the method signature for this task. The method should update the original array to reflect the changes.
+
+Class Example:
+
+public class StudentIDManager {
+    // Method to implement
+}
+
+Method Signature:
+
+public void removeStudentID(int[] studentIDs, int idToRemove);
 */
 
 public class StudentIDManager {
@@ -59,7 +71,7 @@ public class StudentIDManager {
         }
     }
 
-    // Using without using flag
+    // Without using flag
     static void removeStudentID(int[] studentIDs, int[] IDsToRemove) {
         for (int idToRemove : IDsToRemove) {
             boolean found = false;
