@@ -1,4 +1,4 @@
-package assignments.assignments_3;
+package assignments.assignments_3.string;
 
 import java.util.Scanner;
 
@@ -8,9 +8,10 @@ public class Task1 {
 
         System.out.println("Enter a string:");
         String userInput = sc.next();
+        sc.close();
 
         String result = "";
-        for (int i = userInput.length() - 1; i <= 0; i--) {
+        for (int i = userInput.length() - 1; i >= 0; i--) {
             char letter = userInput.charAt(i);
             result += letter;
         }
