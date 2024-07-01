@@ -16,7 +16,7 @@ public class Task4 {
             String userInput = sc.next();
             
             for (String inputWord : inputWords) {
-                if (inputWord.equalsIgnoreCase(userInput)) {
+                if (inputWord.equals(userInput)) {
                     System.out.printf("%s has already been input.\nPlease enter another word.\n", userInput);
                     flag = true;
                     continue checkDuplicate;

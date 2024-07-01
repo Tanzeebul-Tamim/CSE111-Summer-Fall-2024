@@ -3,23 +3,41 @@ package quiz.theory_quiz;
 import java.util.Scanner;
 
 /*
-    Write a Java program that takes an integer n as user input and calculates a sum based on whether the numbers from 1 to n are odd or even. 
-    For even numbers, the program adds the cube of the number to the sum. 
-    For odd numbers, it adds the square of the number to the sum.
-    The program should then print the calculated sum for every number from n down to 1.
+    Write a java program that reads an input number N, then calculates X from the following formula:
+    X(N) = 1^2 + 2^3 + 3^2 + 4^3 + 5^2 + 6^3 + .... + N^[?]
+    Then, display the terms for X for for N - 1, N - 2 and so on (X(N - 1), X(N - 2), etc.)
 
-    Example series (n = 3):
-    For i = 1: 1^2 = 1
-    For i = 2: 1^2 + 2^3 = 1 + 8 = 9
-    For i = 3: 1^2 + 2^3 + 3^2 = 1 + 8 + 9 = 18
-
-    Sample Input:
+    Sample Input 1:
     3
 
-    Sample Output:
+    Sample Output 1:
     18
     9
     1
+    
+    Explanation for (n = 3):
+    For i = 3: 1^2 + 2^3 + 3^2 = 18
+    For i = 2: 1^2 + 2^3 = 9
+    For i = 1: 1^2 = 1
+
+    Sample Input 2:
+    6
+
+    Sample Output 2:
+    323
+    107
+    82
+    18
+    9
+    1
+
+    Explanation for (n = 6):
+    For i = 6: 1^2 + 2^3 + 3^2 + 4^3 + 5^2 + 6^3 = 323
+    For i = 5: 1^2 + 2^3 + 3^2 + 4^3 + 5^2 = 107
+    For i = 4: 1^2 + 2^3 + 3^2 + 4^3 = 82
+    For i = 3: 1^2 + 2^3 + 3^2 = 18
+    For i = 2: 1^2 + 2^3 = 9
+    For i = 1: 1^2 = 1
  */
 
 class Calculate {

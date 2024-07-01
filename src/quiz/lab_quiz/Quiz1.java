@@ -3,15 +3,39 @@ package quiz.lab_quiz;
 import java.util.Scanner;
 
 /*
-    Write a Java program which takes the deposit amount and time period (in years) as user input, and calculates the interest and total receivable amount using the formula (deposit * rate * time) / 100. Calculate the interest and total amount.
+    Write a java program that asks the user to input deposit amount and time period (in years). The chart below shows the interest rate according to the deposit. Calculate the simple interest using the formula: interest = (Deposit * Rate * Time) / 100. Finally display the total receivable amount after that amount of year.
 
-    Sample Input:
-    75000
+    Interest Rate according to Deposited Amount:
+    Less Than 10000 BDT - No Interest
+    Greater or equal 10000 and less than 50000 BDT - 8%
+    Greater or equal 50000 and less than 100000 BDT Greater than 100000 BDT - 10%
+    Greater than 100000 BDT - 12%
+
+    Output Format:
+    "Total Receivable after [Time] years: [total amount]"
+    
+    Sample Input 1:
+    5000.0
     5
 
-    Sample Output:
-    Interest: 37500.00
-    The total receivable amount after 5 years is: 112500.00
+    Sample Output 1:
+    Interest: 0.0
+    Total Receivable after 5 years: 5000.0
+
+    Explanation 1:
+    Since the amount is less than 10,000 that's why no interest.
+
+
+    Sample Input 2:
+    35000.0
+    3
+
+    Sample Output 2:
+    Interest: 8400.0
+    Total Receivable after 3 years: 43400.0
+
+    Explanation 2:
+    8% of 35000 is 8400.0 So total amount 35000+8400-43400.
  */
 
 public class Quiz1 {
@@ -39,7 +63,7 @@ public class Quiz1 {
 
         float interest = (deposit * rate * time) / 100;
 
-        System.out.format("\nInterest: %.2f", interest);
-        System.out.format("\nThe total receivable amount after %d years is: %.2f", time, interest + deposit);
+        System.out.format("\nInterest: %.1f", interest);
+        System.out.format("\nTotal Receivable after %d years: %.1f", time, interest + deposit);
     }
 }
