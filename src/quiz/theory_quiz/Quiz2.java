@@ -3,55 +3,42 @@ package quiz.theory_quiz;
 import java.util.Scanner;
 
 /*
-    Write a Java program that takes an integer N as user input, which represents the number of symptoms. 
-    Then, take N names of symptoms from the user and store them in an array. 
-    One symptom may appear multiple times in the array, indicating that the patient had those particular symptoms multiple times and sequentially.
-    The symptom that appears the most times in the array will be considered the recurring one. 
-    Based on this information, determine and print the name of the most recurring symptom.
+    For a smart diagnosis system, you need to write a java program to support the diagnosis from patients symptoms - which may repeat. Now, you were told that the most significant symptom is the one that occurs the most.
 
-    Example:
-    For N = 5, and the symptoms are ["cough", "fever", "cough", "headache", "cough"]
-    The program should print:
-    "cough" as it appears 3 times, which is the most frequent.
+    Now, Write a java code that takes an input number N, then takes N lines of strings afterwards, which are the actual symptoms and outputs the most recurring symptom. If multiple correct outputs are possible, make sure your code outputs any one.
 
     Sample Input 1:
-    5
-    cough
-    fever
-    cough
-    headache
-    cough
+    6
+    Headache
+    Nausea
+    Tiredness
+    Nausea
+    Itching
+    Weakness
+
 
     Sample Output 1:
-    cough is diagnosed as the most recurring symptom.
+    The most recurring symptom is the Nausea.
 
-    Explanation for (N = 5):
-    The input symptoms are: cough, fever, cough, headache, cough
-    The frequencies are:
-    cough: 3 times
-    fever: 1 time
-    headache: 1 time
-    Since "cough" appears the most (3 times), it is diagnosed as the most recurring symptom.
+    Explanation 1:
+    Of the given symptoms, Nausea occurs twice while all the other symptoms occur once.
 
     Sample Input 2:
-    6
-    sneezing
-    fever
-    sneezing
-    nausea
-    fever
-    fever
+    7
+    Sneezing
+    Headache
+    Sneezing
+    High body temp
+    Headache
+    Nausea
+    Headache
+
 
     Sample Output 2:
-    fever is diagnosed as the most recurring symptom.
+    The most recurring symptom is the Headache.
 
-    Explanation for (N = 6):
-    The input symptoms are: sneezing, fever, sneezing, nausea, fever, fever
-    The frequencies are:
-    sneezing: 2 times
-    fever: 3 times
-    nausea: 1 time
-    Since "fever" appears the most (3 times), it is diagnosed as the most recurring symptom.
+    Explanation 2:
+    Of the given symptoms, Headache occurs three times, and sneezing occurs twice while all the other symptoms occur once.
 */
 
 public class Quiz2 {
@@ -90,6 +77,6 @@ public class Quiz2 {
             }
         }
 
-        System.out.printf("\n%s is diagnosed as the most recurring symptom.\n", mostRecurringSymptom);
+        System.out.printf("\nThe most recurring symptom is the %s.\n", mostRecurringSymptom);
     }
 }
