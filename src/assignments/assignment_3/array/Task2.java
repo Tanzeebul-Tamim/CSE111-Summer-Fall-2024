@@ -1,4 +1,4 @@
-package assignments.assignments_3.array;
+package assignments.assignment_3.array;
 
 import java.util.Scanner;
 
@@ -47,7 +47,9 @@ public class Task2 {
             }
         }
 
-        System.out.printf("\nThe largest number %d was found at location %d.\n", largestAndLocation[0], largestAndLocation[1]);
-        System.out.printf("The smallest number %d was found at location %d.\n", smallestAndLocation[0], smallestAndLocation[1]);
+        System.out.printf("\nThe largest number %d was found at location %d.\n", largestAndLocation[0],
+                largestAndLocation[1]);
+        System.out.printf("The smallest number %d was found at location %d.\n", smallestAndLocation[0],
+                smallestAndLocation[1]);
     }
 }

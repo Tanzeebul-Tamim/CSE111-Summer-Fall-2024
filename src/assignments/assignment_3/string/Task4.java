@@ -1,4 +1,4 @@
-package assignments.assignments_3.string;
+package assignments.assignment_3.string;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -14,7 +14,7 @@ public class Task4 {
         checkDuplicate: do {
             flag = false;
             String userInput = sc.next();
-            
+
             for (String inputWord : inputWords) {
                 if (inputWord.equals(userInput)) {
                     System.out.printf("%s has already been input.\nPlease enter another word.\n", userInput);

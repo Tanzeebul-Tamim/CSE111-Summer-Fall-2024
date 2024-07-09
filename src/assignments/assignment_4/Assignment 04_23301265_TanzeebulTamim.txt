@@ -1,0 +1,217 @@
+// TASK 1
+public class UniversityTester {
+    public static void main(String[] args) {
+        // TASK A
+        University uni1 = new University();
+        University uni2 = new University();
+
+        System.out.println(uni1);
+        System.out.println(uni2);
+
+        uni1.name = "Harvard University";
+        uni1.country = "USA";
+        
+        uni2.name = "University of Oxford";
+        uni2.country = "UK";
+
+        
+        System.out.println(uni1.name);
+        System.out.println(uni1.country);
+        
+        System.out.println(uni2.name);
+        System.out.println(uni2.country);
+        
+        System.out.println("Are the locations same? -> " + (uni1 == uni2));
+
+        // TASK B
+        uni1.name = "Imperial College London";
+        uni1.country = "England";
+
+        uni2.name = "Brac University";
+        uni2.country = "Bangladesh";
+
+        System.out.println(uni1.name);
+        System.out.println(uni1.country);
+
+        System.out.println(uni2.name);
+        System.out.println(uni2.country);
+
+        boolean checkNameSimilarity = uni1.name.equals(uni2.name);
+        boolean checkCountrySimilarity = uni1.country.equals(uni2.country);
+
+        System.out.println("Are the names same? -> " + checkNameSimilarity);
+        System.out.println("Are the countries same? -> " + checkCountrySimilarity);
+    }
+}
+
+// TASK 2
+public class Test2 {
+    public static void main(String[] args) {
+        Circle circle1 = new Circle();
+
+        double area = Math.PI * Math.pow(circle1.radius, 2);
+        double circumference = 2 * Math.PI * circle1.radius;
+
+        System.out.println("Radius of the circle is " + circle1.radius);
+        System.out.println("The area of the circle is " + area);
+        System.out.println("The circumference of the circle is " + circumference);
+    }
+}
+
+// TASK 3
+public class Student {
+    public String name = "Bob";
+    public int id = 1;
+}
+
+// TASK 4
+public class Vehicle {
+    public String type = "Car";
+    public int wheels = 4;
+    public String color = "White";
+}
+
+// TASK 5
+public class Tournament {
+    public String name = null;
+    public String sportsType = null;
+    public int numberOfTeams = 0;
+    public String[] teams = null;
+}
+
+// TASK 6
+public class ImaginaryNumber {
+    public int realPart = 0;
+    public int imaginaryPart = 0;
+
+    public void printNumber() {
+        System.out.printf("%d + %di\n", realPart, imaginaryPart);
+    }
+}
+
+// TASK 7
+public class Cat {
+    public String color = "White";
+    public String action = "sitting";
+
+    public void printCat() {
+        System.out.printf("%s cat is %s\n", color, action);
+    }
+}
+
+// TASK 8
+public class Bird {
+    public String name = null;
+    private int height = 0;
+
+    public void flyUp(int height) {
+        System.out.printf("%s has flown up %d feet.\n", name, height);
+
+        this.height += height;
+    }
+
+    public void flyDown(int height) {
+        if (height > this.height) {
+            System.out.printf("%s cannot fly down %d feet.\n", name, height);
+        } else {
+            if (height < this.height)
+                System.out.printf("%s has flown down %d feet.\n", name, height);
+            else
+                System.out.printf("%s has flown down %d feet and landed.\n", name, height);
+
+            this.height -= height;
+        }
+    }
+
+    public void makeNoise() {
+        String noise = name != null && this.name.equals("Parrot") ? "Squawk" : "Squee";
+
+        System.out.println(noise);
+    }
+}
+
+// TASK 9
+public class CellPhone {
+    public String model = "unknown";
+    public String[] contacts = new String[3];
+    private int contactCount = 0;
+
+    private boolean validateData(String contact) {
+        boolean hyphenFound = false;
+        int hyphenIndex = -1;
+        String contactNo = "";
+
+        for (int i = 0; i < contact.length(); i++) {
+            char character = contact.charAt(i);
+
+            if (character == '-' && contact.charAt(i - 1) == ' ' && contact.charAt(i + 1) == ' ') {
+                hyphenFound = true;
+                hyphenIndex = i;
+            }
+
+            if (hyphenFound && i > hyphenIndex + 1) {
+                contactNo += contact.charAt(i);
+            }
+        }
+
+        if (hyphenFound) {
+            char getZero = contactNo.charAt(0);
+            char getOne = contactNo.charAt(1);
+
+            if (getZero != '0' || getOne != '1') {
+                System.out.println("Invalid contact no!\nCorrect contact no format is \"01***\"");
+                return false;
+            }
+
+            if (contactNo.length() != 5) {
+                System.out.println("Invalid contact no!\nMust contain 5 digits.");
+                return false;
+            }
+
+            for (int i = 0; i < contactNo.length(); i++) {
+                char character = contactNo.charAt(i);
+
+                int ascii = (int) character;
+
+                if (ascii < 48 || ascii > 57) {
+                    System.out.println("Invalid character in contact no!\nMust contain digits only");
+                    return false;
+                }
+            }
+        } else {
+            System.out.println("Invalid format!\nCorrect format is \"Name - 01***\"");
+            return false;
+        }
+
+        return true;
+    }
+
+    public void storeContact(String contact) {
+        boolean dataValidation = validateData(contact);
+
+        if (dataValidation) {
+            if (contactCount < 3) {
+                contacts[contactCount] = contact;
+                contactCount++;
+
+                System.out.println("Contact Stored");
+            } else
+                System.out.println("Memory full. New contact can't be stored.");
+        }
+    }
+
+    public void printDetails() {
+        System.out.printf("Phone Model %s\n", model);
+        System.out.printf("Contacts Stored %d\n", contactCount);
+
+        if (contactCount > 0) {
+            System.out.println("Stored Contacts:");
+        }
+
+        for (String contact : contacts) {
+            if (contact != null) {
+                System.out.println(contact);
+            }
+        }
+    }
+}

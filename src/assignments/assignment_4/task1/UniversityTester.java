@@ -9,19 +9,20 @@ public class UniversityTester {
         System.out.println(uni1);
         System.out.println(uni2);
 
-        System.out.println("Are the locations same? -> " + (uni1 == uni2));
-
         uni1.name = "Harvard University";
         uni1.country = "USA";
-
+        
         uni2.name = "University of Oxford";
         uni2.country = "UK";
 
+        
         System.out.println(uni1.name);
         System.out.println(uni1.country);
-
+        
         System.out.println(uni2.name);
         System.out.println(uni2.country);
+        
+        System.out.println("Are the locations same? -> " + (uni1 == uni2));
 
         // TASK B
         uni1.name = "Imperial College London";
