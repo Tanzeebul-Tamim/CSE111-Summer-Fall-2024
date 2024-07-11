@@ -1,4 +1,4 @@
-package quiz.theory_quiz;
+package quiz.theory_quiz.quiz2;
 
 import java.util.Scanner;
 
@@ -28,7 +28,7 @@ import java.util.Scanner;
     Sneezing
     Headache
     Sneezing
-    High body temp
+    Fever
     Headache
     Nausea
     Headache
@@ -41,7 +41,7 @@ import java.util.Scanner;
     Of the given symptoms, Headache occurs three times, and sneezing occurs twice while all the other symptoms occur once.
 */
 
-public class Quiz2 {
+public class Quiz2A {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
@@ -55,28 +55,27 @@ public class Quiz2 {
         for (int i = 0; i < N; i++) {
             symptoms[i] = sc.nextLine();
         }
-
-        sc.close();
-
+        
         String mostRecurringSymptom = null;
         int maxCount = 0;
-
+        
         for (int i = 0; i < N; i++) {
             String currentSymptom = symptoms[i];
             int count = 0;
-
+            
             for (int j = 0; j < N; j++) {
                 if (symptoms[j].equals(currentSymptom)) {
                     count++;
                 }
             }
-
+            
             if (count > maxCount) {
                 maxCount = count;
                 mostRecurringSymptom = currentSymptom;
             }
         }
-
+        
         System.out.printf("\nThe most recurring symptom is the %s.\n", mostRecurringSymptom);
+        sc.close();
     }
 }

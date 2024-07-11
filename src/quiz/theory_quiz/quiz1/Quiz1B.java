@@ -1,4 +1,4 @@
-package quiz.theory_quiz;
+package quiz.theory_quiz.quiz1;
 
 import java.util.Scanner;
 
@@ -40,8 +40,8 @@ import java.util.Scanner;
     For i = 1: 1^2 = 1
  */
 
-class Calculate {
-    public int formula(int n) {
+public class Quiz1B {
+    static int formula(int n) {
         int sum = 0;
         for (int i = 1; i <= n; i++) {
             if (i % 2 == 0) {
@@ -52,22 +52,19 @@ class Calculate {
         }
         return sum;
     }
-}
 
-public class Quiz1 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Enter the value of n:");
         int n = sc.nextInt();
         System.out.println();
-        sc.close();
-
-        Calculate calc = new Calculate();
 
         for (int i = n; i >= 1; i--) {
-            int result = calc.formula(i);
+            int result = formula(i);
             System.out.println(result);
         }
+
+        sc.close();
     }
 }
