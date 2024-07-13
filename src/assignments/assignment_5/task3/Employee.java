@@ -2,8 +2,13 @@ package assignments.assignment_5.task3;
 
 public class Employee {
     private String name;
-    private float salary = 30000;
-    private String designation = "junior";
+    private float salary;
+    private String designation;
+
+    Employee() {
+        salary = 30000;
+        designation = "junior";
+    }
 
     void newEmployee(String name) {
         this.name = name;

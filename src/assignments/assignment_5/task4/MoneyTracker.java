@@ -1,10 +1,17 @@
 package assignments.assignment_5.task4;
 
 public class MoneyTracker {
-  private String name = null;
-  private float balance = 0;
-  private float lastAdded = 0;
-  private float lastSpent = 0;
+  private String name;
+  private float balance;
+  private float lastAdded;
+  private float lastSpent;
+
+  MoneyTracker() {
+    name = null;
+    balance = 0;
+    lastAdded = 0;
+    lastSpent = 0;
+  }
 
   public void createTracker(String name) {
     this.name = name;
@@ -12,9 +19,9 @@ public class MoneyTracker {
   }
 
   public String info() {
-    String nameString = "Name: " + name;
-    String currentBalance = "Current Balance: " + balance;
-    String result = nameString + "\n" + currentBalance;
+    String name = "Name: " + this.name;
+    String balance = "Current Balance: " + this.balance;
+    String result = name + "\n" + balance;
     return result;
   }
 
