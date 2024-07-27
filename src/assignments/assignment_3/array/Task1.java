@@ -22,15 +22,15 @@ public class Task1 {
         int[] newIntArr = new int[N - 1];
         boolean found = false;
         for (int i = 0; i < intArr.length; i++) {
-            int num = intArr[i];
+            int elem = intArr[i];
 
-            if (num == numToRemove) {
+            if (elem == numToRemove) {
                 found = true;
             } else {
                 if (found) {
-                    newIntArr[i - 1] = intArr[i];
+                    newIntArr[i - 1] = elem;
                 } else if (i != intArr.length - 1) {
-                    newIntArr[i] = intArr[i];
+                    newIntArr[i] = elem;
                 }
             }
         }

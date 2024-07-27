@@ -3,8 +3,8 @@ package assignments.assignment_3.array;
 import java.util.Scanner;
 
 public class Task6 {
-    static void printArr(int N, int[] arr) {
-        for (int i = 0; i < N; i++) {
+    static void printArr(int[] arr) {
+        for (int i = 0; i < arr.length; i++) {
             int elem = arr[i];
             System.out.print(elem);
 
@@ -54,14 +54,14 @@ public class Task6 {
 
             System.out.printf("Explanation: (%d+%d)/2=%d (average of two middle values from ", arr[medianIndex2],
                     arr[medianIndex], median);
-            printArr(N, arr);
+            printArr(arr);
             System.out.print(").");
         } else {
             median = arr[medianIndex];
             System.out.printf("\nThe median is %d.\n\n", median);
 
             System.out.printf("Explanation: %d falls in middle ", median);
-            printArr(N, arr);
+            printArr(arr);
         }
     }
 }
