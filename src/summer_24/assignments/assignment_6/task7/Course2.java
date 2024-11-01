@@ -40,11 +40,10 @@ public class Course2 {
         System.out.printf("Course Code: %s\n", this.code);
         System.out.println("Course Syllabus:");
 
-        if (contentCount == 0) {
-            System.out.println("No content yet.");
-        } else if (contentCount > 0) {
+        if (contentCount > 0) {
             for (int i = 0; i < syllabus.length; i++) {
                 String content = syllabus[i];
+                
                 if (content != null) {
                     System.out.print(content);
 
@@ -52,10 +51,11 @@ public class Course2 {
                         System.out.print(", ");
                     }
                 }
-
             }
 
             System.out.println();
+        } else {
+            System.out.println("No content yet.");
         }
 
     }
