@@ -1,4 +1,4 @@
-package fall_24.class_notes.oct_28;
+package fall_24.class_notes.lec_2;
 
 import java.util.Arrays; // Importing Arrays utility class to use built-in methods for array operations
 

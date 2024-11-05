@@ -1,4 +1,4 @@
-package fall_24.class_notes.oct_28;
+package fall_24.class_notes.lec_2;
 
 public class tester {
     public static void main(String[] args) {

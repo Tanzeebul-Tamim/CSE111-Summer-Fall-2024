@@ -1,4 +1,4 @@
-package fall_24.class_notes.oct_30;
+package fall_24.class_notes.lec_3;
 
 import java.util.Scanner; // Importing Scanner class to take user input
 
