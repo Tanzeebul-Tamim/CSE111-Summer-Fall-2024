@@ -1,8 +1,8 @@
-package summer_24.assignments.assignment_2;
+package fall_24.assignments.assignment1;
 
 import java.util.Scanner;
 
-public class Task8 {
+public class Task2 {
     static boolean isPrime(int num) {
         if (num <= 1) {
             return false;
@@ -24,6 +24,9 @@ public class Task8 {
             int temp = num1;
             num1 = num2;
             num2 = temp;
+        } else if (num1 == num2) {
+            System.out.println("Both numbers are the same. Please enter two different numbers.");
+            return;
         }
 
         for (int i = num1; i <= num2; i++) {
@@ -50,8 +53,7 @@ public class Task8 {
         System.out.println("\nEnter another integer:");
         int num2 = sc.nextInt();
 
-        sc.close();
-
         countPrimes(num1, num2);
+        sc.close();
     }
 }

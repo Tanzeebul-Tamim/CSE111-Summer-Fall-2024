@@ -1,8 +1,8 @@
-package summer_24.assignments.assignment_3.string;
+package fall_24.assignments.assignment1;
 
 import java.util.Scanner;
 
-public class Task5 {
+public class Task3 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
