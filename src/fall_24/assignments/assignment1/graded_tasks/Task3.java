@@ -1,4 +1,4 @@
-package fall_24.assignments.assignment1;
+package fall_24.assignments.assignment1.graded_tasks;
 
 import java.util.Scanner;
 
@@ -16,13 +16,13 @@ public class Task3 {
 
         String result = word1 + " " + word2;
         int asciiSum = 0;
+
         for (int i = 0; i < 2; i++) {
             int condition = i == 0 ? word1.length() : word2.length();
             String word = i == 0 ? word1 : word2;
 
             for (int j = 0; j < condition; j++) {
-                char letter = word.charAt(j);
-                int ascii = (int) letter;
+                int ascii = (int) word.charAt(j);
 
                 if ((ascii >= 65 && ascii <= 90) || (ascii >= 97 && ascii <= 122)) {
                     asciiSum += ascii;
@@ -32,6 +32,7 @@ public class Task3 {
 
         System.out.println(result);
         System.out.println(asciiSum);
+
         sc.close();
     }
 }

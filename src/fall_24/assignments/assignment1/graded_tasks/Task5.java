@@ -1,4 +1,4 @@
-package fall_24.assignments.assignment1;
+package fall_24.assignments.assignment1.graded_tasks;
 
 import java.util.Scanner;
 
@@ -17,7 +17,7 @@ public class Task5 {
             arr[i - 1] = sc.nextInt();
         }
         
-        int range = (int) arr.length / 2;
+        int range = (int) N / 2;
         for (int i = 0; i < range; i++) {
             int elem = arr[i];
             int reverseElem = arr[arr.length - 1 - i];
