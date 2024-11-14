@@ -6,8 +6,8 @@ public class tester1 {
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in); // Creating a Scanner object 's' to read input from the console
 
-        int i = s.nextInt(); // Reading an integer input and assigning it to variable 'i'
-        int j = s.nextInt(); // Reading another integer input and assigning it to variable 'j'
+        int i = s.nextInt();
+        int j = s.nextInt();
 
         // Next line reads any remaining text from the current line after integer input or moves to next line if no text remains.
         String st1 = s.nextLine(); // Reading the rest of the line including any whitespaces after integers; often used to move to a fresh line

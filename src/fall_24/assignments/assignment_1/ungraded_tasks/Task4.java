@@ -1,4 +1,4 @@
-package fall_24.assignments.assignment1.ungraded_tasks;
+package fall_24.assignments.assignment_1.ungraded_tasks;
 
 public class Task4 {
     static void scalarMultiplication(int[][] matrix, int factor) {

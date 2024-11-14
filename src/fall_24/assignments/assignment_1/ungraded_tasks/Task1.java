@@ -1,4 +1,4 @@
-package fall_24.assignments.assignment1.ungraded_tasks;
+package fall_24.assignments.assignment_1.ungraded_tasks;
 
 import java.util.Scanner;
 

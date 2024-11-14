@@ -1,4 +1,4 @@
-package fall_24.assignments.assignment1.graded_tasks;
+package fall_24.assignments.assignment_1.graded_tasks;
 
 public class Task9 {
     static String identityMatrixChecker(int[][] matrix) {

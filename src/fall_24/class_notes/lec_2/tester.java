@@ -1,6 +1,6 @@
 package fall_24.class_notes.lec_2;
 
-public class tester {
+public class Tester {
     public static void main(String[] args) {
         int i; // Declaration only (Memory is allocated for variable 'i')
         i = 5; // Initialization (Assigning a value to 'i')
