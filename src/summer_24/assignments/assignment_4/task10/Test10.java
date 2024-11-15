@@ -24,3 +24,17 @@ public class Test10 {
         System.out.println(h2.height);
     }
 }
+
+// Output:
+/*
+    21
+    5.5
+    2.5
+    22
+    22
+    5.5
+    23
+    6.5
+    24
+    6.5
+ */

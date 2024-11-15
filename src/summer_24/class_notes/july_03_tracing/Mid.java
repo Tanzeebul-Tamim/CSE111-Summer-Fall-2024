@@ -36,3 +36,11 @@ public class Mid {
         System.out.println(m.methodB(m));
     }
 }
+
+// Output:
+/*
+    5 7 19
+    7 105 -2
+    5 105 117
+    5
+ */

@@ -7,3 +7,13 @@ public class test1Driver {
         t1.case2(5, 6);
     }
 }
+
+// Output:
+/*
+    -2 0 -1
+    -1 -3 -2
+    4 13 -2
+    -1 -3 -2
+    9 -3 6
+    3 12 9
+ */

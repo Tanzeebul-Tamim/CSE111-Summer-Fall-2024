@@ -18,12 +18,14 @@ public class Task1_1 {
         for (int i = 0; i < strings.length - 1; i++) {
             String elem = strings[i];
 
-            // Iterating through the rest of the elements and comparing them with the current element
+            // Iterating through the rest of the elements and comparing them with the
+            // current element
             for (int j = i + 1; j < strings.length; j++) {
                 String comparingElem = strings[j];
 
                 /*
-                   Determine the range for character comparison by finding the length of the shorter string
+                 * Determine the range for character comparison by finding the length of the
+                 * shorter string
                  */
                 int length1 = elem.length();
                 int length2 = comparingElem.length();
@@ -37,16 +39,16 @@ public class Task1_1 {
                     char comparingElemLetter = comparingElem.charAt(k);
 
                     /*
-                       Comparing the ASCII values of the letters from both strings at the same
-                       position
+                     * Comparing the ASCII values of the letters from both strings at the same
+                     * position
                      */
                     int elemAscii = (int) elemLetter;
                     int comparingElemAscii = (int) comparingElemLetter;
 
                     /*
-                       Swap the positions of the two strings being compared if the current character
-                       of the earlier string in the array comes after the current character of the
-                       latter string
+                     * Swap the positions of the two strings being compared if the current character
+                     * of the earlier string in the array comes after the current character of the
+                     * latter string
                      */
                     if (elemAscii > comparingElemAscii) {
                         strings[i] = comparingElem;
@@ -57,16 +59,16 @@ public class Task1_1 {
                     }
 
                     /*
-                       If the current character of the latter string in the array comes after the
-                       current character of the previous string, terminate the loop
+                     * If the current character of the latter string in the array comes after the
+                     * current character of the previous string, terminate the loop
                      */
                     else if (elemAscii < comparingElemAscii) {
                         break;
                     }
 
                     /*
-                       If the current character of both strings are same, continue the loop looking
-                       for distinctions
+                     * If the current character of both strings are same, continue the loop looking
+                     * for distinctions
                      */
                     else {
                         continue;
@@ -74,8 +76,9 @@ public class Task1_1 {
                 }
 
                 /*
-                    Ensures the shorter string comes before the longer one if all compared characters are identical
-                */
+                 * Ensures the shorter string comes before the longer one if all compared
+                 * characters are identical
+                 */
                 if (!swapped && length1 > length2) {
                     strings[i] = comparingElem;
                     strings[j] = elem;

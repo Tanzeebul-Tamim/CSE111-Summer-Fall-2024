@@ -7,3 +7,11 @@ public class Tester11 {
         t1.methodA(3);
     }
 }
+
+// Output:
+/*
+    3 1 3
+    30 11 21
+    17 1 38
+    114 32 91
+ */
