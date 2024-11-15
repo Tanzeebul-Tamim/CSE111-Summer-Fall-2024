@@ -18,7 +18,7 @@ public class Task1_1 {
         for (int i = 0; i < strings.length - 1; i++) {
             String elem = strings[i];
 
-            // Comparing the current element to the rest of the elements
+            // Iterating through the rest of the elements and comparing them with the current element
             for (int j = i + 1; j < strings.length; j++) {
                 String comparingElem = strings[j];
 
@@ -28,6 +28,8 @@ public class Task1_1 {
                 int length1 = elem.length();
                 int length2 = comparingElem.length();
                 int range = (length1 < length2) ? length1 : length2;
+
+                boolean swapped = false;
 
                 // Comparing each character
                 for (int k = 0; k < range; k++) {
@@ -50,6 +52,7 @@ public class Task1_1 {
                         strings[i] = comparingElem;
                         strings[j] = elem;
                         elem = comparingElem;
+                        swapped = true;
                         break;
                     }
 
@@ -68,6 +71,14 @@ public class Task1_1 {
                     else {
                         continue;
                     }
+                }
+
+                /*
+                    Ensures the shorter string comes before the longer one if all compared characters are identical
+                */
+                if (!swapped && length1 > length2) {
+                    strings[i] = comparingElem;
+                    strings[j] = elem;
                 }
             }
         }
