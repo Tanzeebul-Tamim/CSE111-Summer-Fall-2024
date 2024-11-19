@@ -4,11 +4,6 @@ public class ImaginaryNumber {
     public int realPart;
     public int imaginaryPart;
 
-    ImaginaryNumber() {
-        this.realPart = 0;
-        this.imaginaryPart = 0;
-    }
-
     void printNumber() {
         System.out.format("%d + %di\n", this.realPart, this.imaginaryPart);
     }

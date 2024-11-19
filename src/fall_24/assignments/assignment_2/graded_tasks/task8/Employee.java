@@ -1,10 +1,15 @@
 package fall_24.assignments.assignment_2.graded_tasks.task8;
 
 public class Employee {
-    private String name = null;
-    private double salary = 30000;
-    private String designation = "junior";
-    private double tax = 0;
+    private String name;
+    private double salary;
+    private String designation;
+    private double tax;
+
+    Employee() {
+        this.salary = 30000;
+        this.designation = "junior";
+    }
 
     public void newEmployee(String name) {
         this.name = name;

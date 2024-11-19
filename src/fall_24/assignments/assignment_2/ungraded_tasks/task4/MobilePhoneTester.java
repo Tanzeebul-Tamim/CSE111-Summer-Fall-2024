@@ -27,35 +27,3 @@ public class MobilePhoneTester {
         m1.details();
     }
 }
-
-/*
-    Total Contacts: 0
-    Contact List:
-    1----------------
-    The contact of John is added.
-    The contact of Maria is added.
-    2----------------
-    Total Contacts: 2
-    Contact List:
-    John:9866
-    Maria:7865
-    3----------------
-    Calling John . . .
-    4----------------
-    The contact of Henry is added.
-    5----------------
-    Calling 7552 . . .
-    Calling Henry . . .
-    6----------------
-    The contact of Gomes is added.
-    The contact of Antony is added.
-    Storage Full!!
-    7----------------
-    Total Contacts: 5
-    Contact List:
-    John:9866
-    Maria:7865
-    Henry:2365
-    Gomes:4589
-    Antony:8421
- */

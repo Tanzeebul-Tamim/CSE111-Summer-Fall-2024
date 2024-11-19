@@ -7,7 +7,6 @@ public class CellPhone {
 
     CellPhone() {
         this.model = "unknown";
-        this.contactCount = 0;
         this.contacts = new String[3];
     }
 
@@ -26,6 +25,7 @@ public class CellPhone {
         System.out.format("Contacts Stored %d\n", this.contactCount);
 
         if (contactCount > 0) {
+            System.out.println("Stored Contacts:");
             for (String contact : this.contacts) {
                 if (contact != null) {
                     System.out.println(contact);

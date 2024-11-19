@@ -5,12 +5,6 @@ public class Assignment {
     public String difficulty;
     public boolean submission;
 
-    Assignment() {
-        this.tasks = 0;
-        this.difficulty = null;
-        this.submission = false;
-    }
-
     void printDetails() {
         System.out.printf("Number of tasks: %d\n", this.tasks);
         System.out.printf("Difficulty level: %s\n", this.difficulty);

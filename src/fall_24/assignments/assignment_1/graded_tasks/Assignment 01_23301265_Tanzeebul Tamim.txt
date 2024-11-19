@@ -1,4 +1,4 @@
-//Task 1
+// Task 1
 import java.util.Scanner;
 
 public class Task1 {
@@ -48,7 +48,7 @@ public class Task1 {
     }
 }
 
-//Task 2
+// Task 2
 import java.util.Scanner;
 
 public class Task2 {
@@ -108,7 +108,7 @@ public class Task2 {
 }
 
 
-//Task 3
+// Task 3
 import java.util.Scanner;
 
 public class Task3 {
@@ -146,7 +146,7 @@ public class Task3 {
     }
 }
 
-//Task 4
+// Task 4
 import java.util.Scanner;
 
 public class Task4 {
@@ -170,7 +170,7 @@ public class Task4 {
     }
 }
 
-//Task 5
+// Task 5
 import java.util.Scanner;
 
 public class Task5 {
@@ -207,7 +207,7 @@ public class Task5 {
     }
 }
 
-//Task 6
+// Task 6
 import java.util.Scanner;
 
 public class Task6 {
@@ -257,7 +257,7 @@ public class Task6 {
     }
 }
 
-//Task 7
+// Task 7
 import java.util.Scanner;
 
 public class Task7 {
@@ -299,7 +299,7 @@ public class Task7 {
     }
 }
 
-//Task 8
+// Task 8
 import java.util.Scanner;
 
 public class Task8 {
@@ -348,7 +348,7 @@ public class Task8 {
     }
 }
 
-//Task 9
+// Task 9
 public class Task9 {
     static String identityMatrixChecker(int[][] matrix) {
         int row = matrix.length;
@@ -391,7 +391,7 @@ public class Task9 {
     }
 }
 
-//Task 10
+// Task 10
 import java.util.Scanner;
 
 public class TreasureHunt {

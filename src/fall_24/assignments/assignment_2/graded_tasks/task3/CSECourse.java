@@ -1,9 +1,9 @@
 package fall_24.assignments.assignment_2.graded_tasks.task3;
 
 public class CSECourse {
-    String courseName;
-    String courseCode;
-    int credit;
+    public String courseName;
+    public String courseCode;
+    public int credit;
 
     CSECourse() {
         this.courseName = "Programming Language II";

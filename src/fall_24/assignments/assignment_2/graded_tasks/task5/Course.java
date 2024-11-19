@@ -5,12 +5,6 @@ public class Course {
     private String code;
     private int credit;
 
-    Course() {
-        this.title = null;
-        this.code = null;
-        this.credit = -1;
-    }
-
     void displayCourse() {
         System.out.printf("Course Name: %s\n", this.title);
         System.out.printf("Course Code: %s\n", this.code);

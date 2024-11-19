@@ -1,0 +1,199 @@
+// Task 1
+public class UniversityTester {
+    public static void main(String[] args) {
+        // TASK A
+        University uni1 = new University();
+        University uni2 = new University();
+
+        System.out.println(uni1);
+        System.out.println(uni2);
+
+        System.out.println(uni1.name);
+        System.out.println(uni1.country);
+
+        System.out.println(uni2.name);
+        System.out.println(uni2.country);
+
+        System.out.println("Are the locations same? -> " + (uni1 == uni2));
+
+        // TASK B
+        uni1.name = "Imperial College London";
+        uni1.country = "England";
+
+        uni2.name = "Brac University";
+        uni2.country = "Bangladesh";
+
+        // The instance variables of both objects has been changed to newly assigned values
+        System.out.println(uni1.name);
+        System.out.println(uni1.country);
+
+        System.out.println(uni2.name);
+        System.out.println(uni2.country);
+
+        boolean checkNameSimilarity = uni1.name.equals(uni2.name);
+        boolean checkCountrySimilarity = uni1.country.equals(uni2.country);
+
+        System.out.println("Are the names same? -> " + checkNameSimilarity);
+        System.out.println("Are the countries same? -> " + checkCountrySimilarity);
+    }
+}
+
+// Task 2
+public class Student {
+    public String name;
+    public int id;
+
+    Student() {
+        this.name = "Default";
+    }
+}
+
+// Task 3
+public class CSECourse {
+    public String courseName;
+    public String courseCode;
+    public int credit;
+
+    CSECourse() {
+        this.courseName = "Programming Language II";
+        this.courseCode = "CSE111";
+        this.credit = 3;
+    }
+}
+
+// Task 4
+public class ImaginaryNumber {
+    public int realPart;
+    public int imaginaryPart;
+
+    void printNumber() {
+        System.out.format("%d + %di\n", this.realPart, this.imaginaryPart);
+    }
+}
+
+// Task 5
+public class Course {
+    private String title;
+    private String code;
+    private int credit;
+
+    void displayCourse() {
+        System.out.printf("Course Name: %s\n", this.title);
+        System.out.printf("Course Code: %s\n", this.code);
+        System.out.printf("Course Credit: %d\n", this.credit);
+    }
+
+    void updateDetails(String title, String code, int credit) {
+        this.title = title;
+        this.code = code;
+        this.credit = credit;
+    }
+}
+
+// Task 6
+public class Assignment {
+    public int tasks;
+    public String difficulty;
+    public boolean submission;
+
+    void printDetails() {
+        System.out.printf("Number of tasks: %d\n", this.tasks);
+        System.out.printf("Difficulty level: %s\n", this.difficulty);
+        System.out.printf("Submission required: %b\n", this.submission);
+    }
+
+    String makeOptional() {
+        if (this.submission) {
+            this.submission = false;
+            return "Assignment will not require submission";
+        } else {
+            return "Submission is already not required";
+        }
+    }
+}
+
+// Task 7
+public class CellPhone {
+    public String model;
+    private String[] contacts;
+    private int contactCount;
+
+    CellPhone() {
+        this.model = "unknown";
+        this.contacts = new String[3];
+    }
+
+    void storeContact(String contact) {
+        if (contactCount < 3) {
+            this.contacts[this.contactCount] = contact;
+            contactCount++;
+            System.out.println("Contact Stored");
+        } else {
+            System.out.println("Memory full. New contact can't be stored.");
+        }
+    }
+
+    void printDetails() {
+        System.out.format("Phone Model %s\n", this.model);
+        System.out.format("Contacts Stored %d\n", this.contactCount);
+
+        if (contactCount > 0) {
+            System.out.println("Stored Contacts:");
+            for (String contact : this.contacts) {
+                if (contact != null) {
+                    System.out.println(contact);
+                }
+            }
+        }
+    }
+}
+
+// Task 8
+public class Employee {
+    private String name;
+    private double salary;
+    private String designation;
+    private double tax;
+
+    Employee() {
+        this.salary = 30000;
+        this.designation = "junior";
+    }
+
+    public void newEmployee(String name) {
+        this.name = name;
+    }
+
+    public void displayInfo() {
+        System.out.format("Employee Name: %s\n", this.name);
+        System.out.format("Employee Salary: %.1f Tk\n", this.salary);
+        System.out.format("Employee Designation: %s\n", this.designation);
+    }
+
+    public void calculateTax() {
+        if (this.salary > 30000) {
+            if (this.salary > 50000) {
+                this.tax = (salary / 100) * 30;
+            } else {
+                this.tax = (salary / 100) * 10;
+            }
+
+            System.out.format("%s Tax Amount: %.2f Tk\n", this.name, this.tax);
+        } else {
+            System.out.println("No need to pay tax");
+        }
+    }
+
+    public void promoteEmployee(String designation) {
+        if (designation.equals("senior")) {
+            this.salary += 25000;
+        } else if (designation.equals("lead")) {
+            this.salary += 50000;
+        } else if (designation.equals("manager")) {
+            this.salary += 75000;
+        }
+        this.designation = designation;
+        System.out.format("%s has been promoted to %s\n", this.name, this.designation);
+        System.out.format("New Salary: %.2f Tk\n", this.salary);
+    }
+}
