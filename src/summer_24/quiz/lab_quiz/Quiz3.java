@@ -1,7 +1,5 @@
 package summer_24.quiz.lab_quiz;
 
-import java.util.Scanner;
-
 /*
     Write a Java program that takes two integers as input from the user and determines which number has more odd digits.
 
@@ -19,6 +17,8 @@ import java.util.Scanner;
     Sample Output 2:
     Both numbers have the same number of odd digits.
 */
+
+import java.util.Scanner;
 
 public class Quiz3 {
     static int digitCounter(int num) {

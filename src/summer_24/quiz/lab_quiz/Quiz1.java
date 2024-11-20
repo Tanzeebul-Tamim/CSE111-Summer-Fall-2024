@@ -1,7 +1,5 @@
 package summer_24.quiz.lab_quiz;
 
-import java.util.Scanner;
-
 /*
     Write a java program that asks the user to input deposit amount and time period (in years). The chart below shows the interest rate according to the deposit. Calculate the simple interest using the formula: interest = (Deposit * Rate * Time) / 100. Finally display the total receivable amount after that amount of year.
 
@@ -37,6 +35,8 @@ import java.util.Scanner;
     Explanation 2:
     8% of 35000 is 8400.0 So total amount 35000+8400-43400.
  */
+
+import java.util.Scanner;
 
 public class Quiz1 {
     public static void main(String[] args) {

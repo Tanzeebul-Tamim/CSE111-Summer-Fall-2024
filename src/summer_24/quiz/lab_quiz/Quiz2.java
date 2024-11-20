@@ -1,7 +1,5 @@
 package summer_24.quiz.lab_quiz;
 
-import java.util.Scanner;
-
 /*
     Write a Java program that takes a string input from the user and converts the first character of each sentence
     that starts with a lowercase letter to uppercase. Other characters in the string should remain unchanged.
@@ -19,6 +17,8 @@ import java.util.Scanner;
     Sample Output 2:
     This is a test! Let's see if it works.
 */
+
+import java.util.Scanner;
 
 public class Quiz2 {
     public static void main(String[] args) {

@@ -1,7 +1,5 @@
 package summer_24.problems;
 
-import java.util.Scanner;
-
 /*
     Write a Java code that asks the user for the value of N as input and then prints the value of Y.
 
@@ -16,6 +14,8 @@ import java.util.Scanner;
     Explanation:
     For the input 5 we'll add up the first 5 numbers of the series. So, 3 - 5 + 7 - 9 + 11 = 7
  */
+
+import java.util.Scanner;
 
 public class SeriesSum {
     public static void main(String[] args) {

@@ -1,7 +1,5 @@
 package summer_24.quiz.theory_quiz.quiz2;
 
-import java.util.Scanner;
-
 /*
     For a smart diagnosis system, you need to write a java program to support the diagnosis from patients symptoms - which may repeat. Now, you were once told that the most important symptom is the one that has more letters in its name, especially considering the sum of the ascii numbers of those letters.
 
@@ -40,6 +38,8 @@ import java.util.Scanner;
     Explanation 2:
     Of the given symptoms, Headache occurs three times, and sneezing occurs twice while all the other symptoms occur once.
 */
+
+import java.util.Scanner;
 
 public class Quiz2B {
     public static void main(String[] args) {

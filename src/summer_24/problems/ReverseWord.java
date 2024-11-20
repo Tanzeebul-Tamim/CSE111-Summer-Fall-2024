@@ -1,7 +1,5 @@
 package summer_24.problems;
 
-import java.util.Scanner;
-
 /*
     Write a Java program that takes a string as input and reverses the order of words in it.
 
@@ -9,6 +7,8 @@ import java.util.Scanner;
     CSE110 is easy	    easy is CSE110
     Attention please!	please! Attention
  */
+
+import java.util.Scanner;
 
 public class ReverseWord {
     public static void main(String[] args) {

@@ -1,7 +1,5 @@
 package summer_24.quiz.theory_quiz.quiz1;
 
-import java.util.Scanner;
-
 /*
     Write a java program that reads an input number N, then calculates X from the following formula:
     X(N) = 1^3 + 2^2 + 3^3 + 4^2 + 5^3 + 6^2 + .... + N^[?]
@@ -39,6 +37,8 @@ import java.util.Scanner;
     For i = 2: 1^3 + 2^2 = 5
     For i = 1: 1^3 = 1
  */
+
+import java.util.Scanner;
 
 public class Quiz1A {
     static int formula(int n) {

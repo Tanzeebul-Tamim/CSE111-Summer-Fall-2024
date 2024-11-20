@@ -1,7 +1,5 @@
 package fall_24.quiz.theory_quiz.quiz1;
 
-import java.util.Scanner;
-
 /*
     For a smart diagnosis system, you need to write a java program to support the diagnosis from patients symptoms - which may repeat. Now, you were told that the most significant symptom is the one that occurs the most.
 
@@ -40,6 +38,8 @@ import java.util.Scanner;
     Explanation 2:
     Of the given symptoms, Headache occurs three times, and sneezing occurs twice while all the other symptoms occur once.
 */
+
+import java.util.Scanner;
 
 public class Quiz1 {
     public static void main(String[] args) {
