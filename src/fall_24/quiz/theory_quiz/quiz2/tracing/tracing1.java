@@ -29,3 +29,10 @@ class MidTest {
         System.out.printf("%d %d %d\n", a, b, n);
     }
 }
+
+// Outputs:
+/*
+    13 -1 10
+    1 7 6
+    4 0 26
+ */
