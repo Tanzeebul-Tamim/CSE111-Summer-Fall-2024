@@ -1,4 +1,4 @@
-package summer_24.problems;
+package summer_24.random_solves;
 
 public class SquareSequence {
     public static void main(String[] args) {

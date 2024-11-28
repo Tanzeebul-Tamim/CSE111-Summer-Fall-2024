@@ -1,4 +1,4 @@
-package summer_24.assignments.assignment_5.task6;
+package fall_24.assignments.assignment_3.graded_tasks.task7;
 
 public class Cart {
     private class Item {
@@ -20,7 +20,7 @@ public class Cart {
     private double discount;
     boolean hasDiscount;
 
-    Cart() {
+    public Cart() {
         this.items = new Item[3];
         this.itemNames = new String[3];
         this.itemPrices = new double[3];
@@ -46,6 +46,10 @@ public class Cart {
         }
     }
 
+    void addItem(double itemPrice, String itemName) {
+        addItem(itemName, itemPrice);
+    }
+
     void giveDiscount(int discountPercentage) {
         for (Item item : items) {
             if (item != null) {
@@ -69,7 +73,7 @@ public class Cart {
         }
 
         System.out.printf("Discount Applied: %.1f%%\n", this.discount);
-        System.out.printf("Total price: %.12f\n", total);
+        System.out.printf("Total price: %.2f\n", total);
     }
 
 }

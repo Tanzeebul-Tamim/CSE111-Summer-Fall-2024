@@ -1,4 +1,4 @@
-package summer_24.problems;
+package summer_24.random_solves;
 
 /*
     Write a Java code that asks the user for the value of N as input and then prints the value of Y.

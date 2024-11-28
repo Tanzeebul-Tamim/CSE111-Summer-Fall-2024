@@ -1,4 +1,4 @@
-package summer_24.problems;
+package summer_24.random_solves;
 
 /*
     You need to write a Java program to encrypt a given number by multiplying each digit by 3 and outputting the results. The program will have two encryption methods: one that processes the digits in reverse order and another that processes the digits in the original order. The program will take an integer input and print the encrypted result for both methods.

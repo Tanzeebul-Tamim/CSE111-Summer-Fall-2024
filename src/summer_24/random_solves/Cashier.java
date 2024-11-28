@@ -1,4 +1,4 @@
-package summer_24.problems;
+package summer_24.random_solves;
 
 /*
     You need to write a Java program to simulate a cashier system that calculates and outputs the number of each denomination of notes and coins required to give the correct change. The program will take an input for the total bill amount and the amount given by the customer. If the amount given is less than the bill, the program will output the additional amount required. If the amount given is more than or equal to the bill, the program will output the change to be returned in the form of notes and coins.
