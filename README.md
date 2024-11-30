@@ -6,10 +6,11 @@ Welcome to the repository for the BRACu Summer-2024 and Fall-2024 semester of CS
 
 The repository is organized into the following sections:
 
-- **Assignments**: Contains all homework assignments focusing on problem-solving, data structures, and language theory.
+- **Assignments**: Contains all lab assignments focusing on problem-solving and object oriented programming.
 - **Quizzes**: Contains quizzes administered throughout the semester to assess understanding of course concepts.
 - **Practice Works**: Practice exercises aimed at reinforcing the concepts covered in lectures.
 - **Exercise Solutions**: Solutions to exercises provided during lectures and practice sessions.
+- **Lecture Notes and Files**: Includes lecture notes, files, and solutions used during the classes/lectures to conduct and support the teaching process.
 
 ## How to Use
 
