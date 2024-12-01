@@ -7,7 +7,7 @@ public class UberApp {
     private int rideCount;
     private String[] rideHistory;
 
-    UberApp() {
+    public UberApp() {
         this.name = null;
         this.age = -1;
         this.contactNo = null;
@@ -15,13 +15,13 @@ public class UberApp {
         this.rideHistory = new String[3];
     }
 
-    void createProfile(String name, int age, String contactNo) {
+    public void createProfile(String name, int age, String contactNo) {
         this.name = name;
         this.age = age;
         this.contactNo = contactNo;
     }
 
-    void showProfile() {
+    public void showProfile() {
         System.out.println("Hello! This is your Profile:");
         System.out.printf("Full Name: %s\n", name);
         System.out.printf("Age: %s\n", age);
@@ -32,7 +32,7 @@ public class UberApp {
         return 3 - rideCount;
     }
 
-    void bookRide(String destination, double distance) {
+    public void bookRide(String destination, double distance) {
         if (rideCount < 3) {
             double fare = 30 * distance;
 
@@ -47,7 +47,7 @@ public class UberApp {
         }
     }
 
-    void changeLocation(String destination, double distance) {
+    public void changeLocation(String destination, double distance) {
         double regularFare = 30 * distance;
         double feeAddedFare = regularFare + regularFare * 20 / 100;
 
@@ -57,7 +57,7 @@ public class UberApp {
         rideHistory[rideCount - 1] = destination;
     }
 
-    void ridingHistory() {
+    public void ridingHistory() {
         String locations = "";
         int visitedCount = 0;
 
@@ -78,7 +78,7 @@ public class UberApp {
         }
     }
 
-    void resetMonth() {
+    public void resetMonth() {
         rideHistory = new String[3];
         rideCount = 0;
     }

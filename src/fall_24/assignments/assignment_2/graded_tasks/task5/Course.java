@@ -5,13 +5,13 @@ public class Course {
     private String code;
     private int credit;
 
-    void displayCourse() {
+    public void displayCourse() {
         System.out.printf("Course Name: %s\n", this.title);
         System.out.printf("Course Code: %s\n", this.code);
         System.out.printf("Course Credit: %d\n", this.credit);
     }
 
-    void updateDetails(String title, String code, int credit) {
+    public void updateDetails(String title, String code, int credit) {
         this.title = title;
         this.code = code;
         this.credit = credit;

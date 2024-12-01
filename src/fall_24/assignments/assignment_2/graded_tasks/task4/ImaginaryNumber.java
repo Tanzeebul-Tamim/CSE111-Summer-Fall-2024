@@ -4,7 +4,7 @@ public class ImaginaryNumber {
     public int realPart;
     public int imaginaryPart;
 
-    void printNumber() {
+    public void printNumber() {
         System.out.format("%d + %di\n", this.realPart, this.imaginaryPart);
     }
 }

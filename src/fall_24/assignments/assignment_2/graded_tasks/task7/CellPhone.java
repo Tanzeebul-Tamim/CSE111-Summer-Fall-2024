@@ -5,12 +5,12 @@ public class CellPhone {
     private String[] contacts;
     private int contactCount;
 
-    CellPhone() {
+    public CellPhone() {
         this.model = "unknown";
         this.contacts = new String[3];
     }
 
-    void storeContact(String contact) {
+    public void storeContact(String contact) {
         if (contactCount < 3) {
             this.contacts[this.contactCount] = contact;
             contactCount++;
@@ -20,7 +20,7 @@ public class CellPhone {
         }
     }
 
-    void printDetails() {
+    public void printDetails() {
         System.out.format("Phone Model %s\n", this.model);
         System.out.format("Contacts Stored %d\n", this.contactCount);
 

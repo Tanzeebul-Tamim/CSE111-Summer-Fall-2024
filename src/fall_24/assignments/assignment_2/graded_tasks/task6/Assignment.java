@@ -5,13 +5,13 @@ public class Assignment {
     public String difficulty;
     public boolean submission;
 
-    void printDetails() {
+    public void printDetails() {
         System.out.printf("Number of tasks: %d\n", this.tasks);
         System.out.printf("Difficulty level: %s\n", this.difficulty);
         System.out.printf("Submission required: %b\n", this.submission);
     }
 
-    String makeOptional() {
+    public String makeOptional() {
         if (this.submission) {
             this.submission = false;
             return "Assignment will not require submission";

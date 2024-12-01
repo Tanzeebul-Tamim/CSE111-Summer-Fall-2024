@@ -6,19 +6,19 @@ public class Reader {
     private int capacity;
     private String[] booksRead;
 
-    Reader() {
+    public Reader() {
         this.name = "New user";
         this.capacity = 0;
         this.bookCount = 0;
     }
 
-    void createReader(String name, int capacity) {
+    public void createReader(String name, int capacity) {
         this.name = name;
         this.capacity = capacity;
         this.booksRead = new String[capacity];
     }
 
-    void readerInfo() {
+    public void readerInfo() {
         System.out.printf("Name: %s\n", name);
         System.out.printf("Capacity: %d\n", capacity);
         System.out.println("Books:");
@@ -33,7 +33,7 @@ public class Reader {
         }
     }
 
-    void addBook(String bookName) {
+    public void addBook(String bookName) {
         if (bookCount < capacity) {
             booksRead[bookCount] = bookName;
             bookCount++;
@@ -42,7 +42,7 @@ public class Reader {
         }
     }
 
-    void increaseCapacity(int capacity) {
+    public void increaseCapacity(int capacity) {
         String[] preserveBooks = new String[capacity];
 
         for (int i = 0; i < this.capacity; i++) {

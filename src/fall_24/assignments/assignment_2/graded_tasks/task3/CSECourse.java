@@ -5,7 +5,7 @@ public class CSECourse {
     public String courseCode;
     public int credit;
 
-    CSECourse() {
+    public CSECourse() {
         this.courseName = "Programming Language II";
         this.courseCode = "CSE111";
         this.credit = 3;

@@ -6,7 +6,7 @@ public class Cart {
         double itemPrice;
         double discountPrice;
 
-        Item(String itemName, double itemPrice) {
+        private Item(String itemName, double itemPrice) {
             this.itemName = itemName;
             this.itemPrice = itemPrice;
         }
@@ -20,17 +20,17 @@ public class Cart {
     private double discount;
     boolean hasDiscount;
 
-    Cart() {
+    public Cart() {
         this.items = new Item[3];
         this.itemNames = new String[3];
         this.itemPrices = new double[3];
     }
 
-    void create_cart(int cartNo) {
+    public void create_cart(int cartNo) {
         this.cartNo = cartNo;
     }
 
-    void addItem(String itemName, double itemPrice) {
+    public void addItem(String itemName, double itemPrice) {
         if (itemCount < 3) {
             Item item = new Item(itemName, itemPrice);
 
@@ -46,7 +46,7 @@ public class Cart {
         }
     }
 
-    void giveDiscount(int discountPercentage) {
+    public void giveDiscount(int discountPercentage) {
         for (Item item : items) {
             if (item != null) {
                 item.discountPrice = item.itemPrice - item.itemPrice * discountPercentage / 100;
@@ -57,7 +57,7 @@ public class Cart {
         this.discount = discountPercentage;
     }
 
-    void cartDetails() {
+    public void cartDetails() {
         System.out.printf("Your cart (c%d) :\n", this.cartNo);
         double total = 0;
 

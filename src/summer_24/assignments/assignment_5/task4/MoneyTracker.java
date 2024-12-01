@@ -6,7 +6,7 @@ public class MoneyTracker {
   private float lastAdded;
   private float lastSpent;
 
-  MoneyTracker() {
+  public MoneyTracker() {
     name = null;
     balance = 0;
     lastAdded = 0;

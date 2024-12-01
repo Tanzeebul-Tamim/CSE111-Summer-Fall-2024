@@ -5,22 +5,22 @@ public class Employee {
     private float salary;
     private String designation;
 
-    Employee() {
+    public Employee() {
         salary = 30000;
         designation = "junior";
     }
 
-    void newEmployee(String name) {
+    public void newEmployee(String name) {
         this.name = name;
     }
 
-    void displayInfo() {
+    public void displayInfo() {
         System.out.printf("Employee Name: %s\n", this.name);
         System.out.printf("Employee Salary: %.1f Tk\n", this.salary);
         System.out.printf("Employee Designation: %s\n", this.designation);
     }
 
-    void promoteEmployee(String designation) {
+    public void promoteEmployee(String designation) {
         System.out.printf("%s has been promoted to %s\n", name, designation);
 
         if (designation.equals("senior")) {
@@ -40,7 +40,7 @@ public class Employee {
         System.out.printf("New Salary: %.2f Tk\n", this.salary);
     }
 
-    void calculateTax() {
+    public void calculateTax() {
         float tax;
 
         if (this.salary > 50000) {

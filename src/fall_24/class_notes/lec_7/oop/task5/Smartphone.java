@@ -7,7 +7,6 @@ public class Smartphone {
 
     public void setModel(String model) {
         this.model = model;
-        this.featureCount = 0;
     }
 
     public void addFeature(String featureName) {

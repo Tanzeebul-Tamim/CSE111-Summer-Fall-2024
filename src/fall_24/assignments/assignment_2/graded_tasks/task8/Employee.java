@@ -6,7 +6,7 @@ public class Employee {
     private String designation;
     private double tax;
 
-    Employee() {
+    public Employee() {
         this.salary = 30000;
         this.designation = "junior";
     }

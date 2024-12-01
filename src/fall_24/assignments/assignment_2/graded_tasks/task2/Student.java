@@ -4,7 +4,7 @@ public class Student {
     public String name;
     public int id;
 
-    Student() {
+    public Student() {
         this.name = "Default";
     }
 }

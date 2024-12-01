@@ -4,7 +4,7 @@ public class Cat {
     public String color;
     public String action;
 
-    Cat() {
+    public Cat() {
         this.color = "White";
         this.action = "sitting";
     }

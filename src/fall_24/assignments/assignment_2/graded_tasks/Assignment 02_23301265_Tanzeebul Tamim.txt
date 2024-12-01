@@ -43,7 +43,7 @@ public class Student {
     public String name;
     public int id;
 
-    Student() {
+    public Student() {
         this.name = "Default";
     }
 }
@@ -54,7 +54,7 @@ public class CSECourse {
     public String courseCode;
     public int credit;
 
-    CSECourse() {
+    public CSECourse() {
         this.courseName = "Programming Language II";
         this.courseCode = "CSE111";
         this.credit = 3;
@@ -66,7 +66,7 @@ public class ImaginaryNumber {
     public int realPart;
     public int imaginaryPart;
 
-    void printNumber() {
+    public void printNumber() {
         System.out.format("%d + %di\n", this.realPart, this.imaginaryPart);
     }
 }
@@ -77,13 +77,13 @@ public class Course {
     private String code;
     private int credit;
 
-    void displayCourse() {
+    public void displayCourse() {
         System.out.printf("Course Name: %s\n", this.title);
         System.out.printf("Course Code: %s\n", this.code);
         System.out.printf("Course Credit: %d\n", this.credit);
     }
 
-    void updateDetails(String title, String code, int credit) {
+    public void updateDetails(String title, String code, int credit) {
         this.title = title;
         this.code = code;
         this.credit = credit;
@@ -96,13 +96,13 @@ public class Assignment {
     public String difficulty;
     public boolean submission;
 
-    void printDetails() {
+    public void printDetails() {
         System.out.printf("Number of tasks: %d\n", this.tasks);
         System.out.printf("Difficulty level: %s\n", this.difficulty);
         System.out.printf("Submission required: %b\n", this.submission);
     }
 
-    String makeOptional() {
+    public String makeOptional() {
         if (this.submission) {
             this.submission = false;
             return "Assignment will not require submission";
@@ -118,12 +118,12 @@ public class CellPhone {
     private String[] contacts;
     private int contactCount;
 
-    CellPhone() {
+    public CellPhone() {
         this.model = "unknown";
         this.contacts = new String[3];
     }
 
-    void storeContact(String contact) {
+    public void storeContact(String contact) {
         if (contactCount < 3) {
             this.contacts[this.contactCount] = contact;
             contactCount++;
@@ -133,7 +133,7 @@ public class CellPhone {
         }
     }
 
-    void printDetails() {
+    public void printDetails() {
         System.out.format("Phone Model %s\n", this.model);
         System.out.format("Contacts Stored %d\n", this.contactCount);
 
@@ -155,7 +155,7 @@ public class Employee {
     private String designation;
     private double tax;
 
-    Employee() {
+    public Employee() {
         this.salary = 30000;
         this.designation = "junior";
     }

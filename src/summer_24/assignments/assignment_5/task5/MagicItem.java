@@ -5,7 +5,7 @@ public class MagicItem {
         String itemName;
         int boost;
 
-        Item(String itemName, int boost) {
+        private Item(String itemName, int boost) {
             this.itemName = itemName;
             this.boost = boost;
         }
@@ -16,14 +16,14 @@ public class MagicItem {
     private Item[] items;
     private int itemCount;
 
-    void newCharacter(String characterName) {
+    public void newCharacter(String characterName) {
         this.characterName = characterName;
         this.energyLevel = 0;
         this.itemCount = 0;
         items = new Item[3];
     }
 
-    void displayInfo() {
+    public void displayInfo() {
         System.out.printf("Character Name: %s\n", characterName);
         System.out.printf("Energy Level: %d\n", energyLevel);
 
@@ -33,7 +33,7 @@ public class MagicItem {
         }
     }
 
-    void findItem(String foundItem) {
+    public void findItem(String foundItem) {
         if (itemCount > 2) {
             System.out.println("All item slots occupied.");
             itemCount--;
@@ -57,7 +57,7 @@ public class MagicItem {
 
     }
 
-    void useItem(String usedItem) {
+    public void useItem(String usedItem) {
         if (itemCount < 0) {
             System.out.println("All item slots occupied.");
             itemCount++;
