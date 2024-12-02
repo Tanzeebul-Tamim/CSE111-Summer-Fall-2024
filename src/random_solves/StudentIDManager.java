@@ -1,4 +1,4 @@
-package summer_24.random_solves;
+package random_solves;
 
 /*
 You are provided with an array of student IDs representing the IDs of students in a school.

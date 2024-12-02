@@ -1,4 +1,4 @@
-package summer_24.random_solves;
+package random_solves;
 
 /*
     Write a Java program that takes a string as input and reverses the order of words in it.
