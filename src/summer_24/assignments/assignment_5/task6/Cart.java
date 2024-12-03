@@ -2,9 +2,9 @@ package summer_24.assignments.assignment_5.task6;
 
 public class Cart {
     private class Item {
-        String itemName;
-        double itemPrice;
-        double discountPrice;
+        private String itemName;
+        private double itemPrice;
+        private double discountPrice;
 
         private Item(String itemName, double itemPrice) {
             this.itemName = itemName;

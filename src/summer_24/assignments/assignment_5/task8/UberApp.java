@@ -28,7 +28,7 @@ public class UberApp {
         System.out.printf("Phone Number: %s\n", contactNo);
     }
 
-    int remainingRides() {
+    public int remainingRides() {
         return 3 - rideCount;
     }
 

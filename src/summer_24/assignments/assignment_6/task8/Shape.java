@@ -4,7 +4,7 @@ public class Shape {
     private String name;
     private String area;
 
-    void setParameters(String name, int... properties) {
+    public void setParameters(String name, int... properties) {
         this.name = name;
         double areaValue;
 
@@ -30,7 +30,7 @@ public class Shape {
 
     }
 
-    String details() {
+    public String details() {
         String name = "Shape Name: " + this.name;
         String area = "Area: " + this.area;
 

@@ -8,7 +8,7 @@ public class Customer {
     private int[] prices;
     private boolean fourParams;
 
-    Customer() {
+    public Customer() {
         this.items = new String[4];
         this.prices = new int[4];
     }

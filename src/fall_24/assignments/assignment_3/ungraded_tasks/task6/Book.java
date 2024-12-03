@@ -6,7 +6,7 @@ public class Book {
     private String genre;
     private int pages;
 
-    Book() {
+    public Book() {
         this.title = "Not Set";
         this.author = "Unknown";
         this.genre = "Not Set";

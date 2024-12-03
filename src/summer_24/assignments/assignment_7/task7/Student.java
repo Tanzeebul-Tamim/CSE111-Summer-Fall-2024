@@ -6,29 +6,26 @@ public class Student {
     private String[] courses;
     private int courseCount;
 
-    Student(int id) {
+    public Student(int id) {
         this.id = id;
-        this.cgpa = 0;
         this.courses = new String[4];
-        this.courseCount = 0;
     }
 
-    Student(int id, double cgpa) {
+    public Student(int id, double cgpa) {
         this.id = id;
         this.cgpa = cgpa;
         this.courses = new String[4];
-        this.courseCount = 0;
     }
 
-    void setID(int id) {
+    public void setID(int id) {
         this.id = id;
     }
 
-    void setCG(double cgpa) {
+    public void setCG(double cgpa) {
         this.cgpa = cgpa;
     }
 
-    void addCourse(String course) {
+    public void addCourse(String course) {
         if (cgpa == 0) {
             System.out.printf("Failed to add %s\n", course);
             System.out.printf("Set CG first\n");
@@ -46,13 +43,13 @@ public class Student {
         }
     }
 
-    void addCourse(String[] courses) {
+    public void addCourse(String[] courses) {
         for (String course : courses) {
             addCourse(course);
         }
     }
 
-    void showAdvisee() {
+    public void showAdvisee() {
         System.out.printf("Student ID: %d, CGPA: %.1f\n", this.id, this.cgpa);
 
         if (courseCount > 0) {
@@ -77,7 +74,7 @@ public class Student {
         }
     }
 
-    void rmAllCourse() {
+    public void rmAllCourse() {
         this.courseCount = 0;
         this.courses = new String[4];
     }

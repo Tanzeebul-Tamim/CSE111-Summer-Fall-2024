@@ -4,7 +4,7 @@ public class Shape2D {
     private String shape;
     private int[] lengths;
 
-    Shape2D(int length) {
+    public Shape2D(int length) {
         this.shape = "Square";
         this.lengths = new int[1];
 
@@ -13,7 +13,7 @@ public class Shape2D {
         System.out.printf("A %s has been created with length: %d\n", this.shape, length);
     }
 
-    Shape2D(int length, int breadth) {
+    public Shape2D(int length, int breadth) {
         this.shape = "Rectangle";
         this.lengths = new int[2];
 
@@ -23,7 +23,7 @@ public class Shape2D {
         System.out.printf("A %s has been created with length: %d and breadth: %d\n", this.shape, length, breadth);
     }
 
-    Shape2D(int height, int base, String shape) {
+    public Shape2D(int height, int base, String shape) {
         this.shape = shape;
         this.lengths = new int[2];
 
@@ -33,7 +33,7 @@ public class Shape2D {
         System.out.printf("A %s has been created with height: %d and base: %d\n", this.shape, height, base);
     }
 
-    Shape2D(int side1, int side2, int side3) {
+    public Shape2D(int side1, int side2, int side3) {
         this.shape = "Triangle";
         this.lengths = new int[3];
 
@@ -44,7 +44,7 @@ public class Shape2D {
         System.out.printf("A triangle has been created with the following sides: %d, %d, %d\n", side1, side2, side3);
     }
 
-    void area() {
+    public void area() {
         double area;
 
         if (this.shape.equals("Square")) {

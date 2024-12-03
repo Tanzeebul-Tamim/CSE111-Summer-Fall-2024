@@ -6,19 +6,18 @@ public class Course {
     private String[] syllabus;
     private int contentCount;
 
-    Course() {
+    public Course() {
         this.name = "";
         this.code = "";
         this.syllabus = new String[4];
-        this.contentCount = 0;
     }
 
-    void createCourse(String name, String code) {
+    public void createCourse(String name, String code) {
         this.name = name;
         this.code = code;
     }
 
-    void addOneContent(String content) {
+    public void addOneContent(String content) {
         if (contentCount < 4) {
             syllabus[contentCount] = content;
             contentCount++;
@@ -28,12 +27,12 @@ public class Course {
         }
     }
 
-    void addTwoContent(String content1, String content2) {
+    public void addTwoContent(String content1, String content2) {
         this.addOneContent(content1);
         this.addOneContent(content2);
     }
 
-    void printDetails() {
+    public void printDetails() {
         System.out.println("Course Details:");
         System.out.printf("Course Name: %s\n", this.name);
         System.out.printf("Course Code: %s\n", this.code);

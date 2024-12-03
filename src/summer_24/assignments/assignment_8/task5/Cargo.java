@@ -17,7 +17,6 @@ public class Cargo {
 
     public static String capacity() {
         String formattedCapacity = String.format("%.1f", capacity);
-
         return formattedCapacity;
     }
 

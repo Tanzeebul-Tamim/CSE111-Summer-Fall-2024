@@ -15,10 +15,6 @@ public class MobilePhone {
         }
     }
 
-    public MobilePhone() {
-        this.contactCount = 0;
-    }
-
     public void setContactCapacity(int capacity) {
         this.capacity = capacity;
         this.contactList = new Contact[capacity];

@@ -4,18 +4,13 @@ public class LightController {
     private boolean isON;
     private int brightness;
 
-    LightController() {
-        this.isON = false;
-        this.brightness = 0;
-    }
-
-    void showLightStatus() {
+    public void showLightStatus() {
         String status = this.isON ? "ON" : "OFF";
         System.out.printf("Light status: %s\n", status);
         System.out.printf("Brightness Level: %d\n", this.brightness);
     }
 
-    void switchLight() {
+    public void switchLight() {
         this.isON = !this.isON;
 
         if (this.isON) {
@@ -27,7 +22,7 @@ public class LightController {
         }
     }
 
-    void adjustBrightness(int brightness) {
+    public void adjustBrightness(int brightness) {
         int adjustedBrightness = this.brightness + brightness;
 
         if (this.isON) {
@@ -42,7 +37,7 @@ public class LightController {
         }
     }
 
-    String resetSettings() {
+    public String resetSettings() {
         this.brightness = 1;
         return "Light settings have been reset.";
     }

@@ -5,25 +5,22 @@ public class Book {
     private String author;
     private int price;
 
-    Book(String title) {
+    public Book(String title) {
         this.title = title;
-        this.author = null;
-        this.price = 0;
     }
 
-    Book(String title, String author) {
+    public Book(String title, String author) {
         this.title = title;
         this.author = author;
-        this.price = 0;
     }
 
-    Book(String title, String author, int price) {
+    public Book(String title, String author, int price) {
         this.title = title;
         this.author = author;
         this.price = price;
     }
 
-    void displayDetails() {
+    public void displayDetails() {
         System.out.printf("Title: %s", this.title);
 
         if (author != null) {
@@ -38,11 +35,11 @@ public class Book {
         }
     }
 
-    void setDetails(int price) {
+    public void setDetails(int price) {
         this.price = price;
     }
 
-    void setDetails(String author, int price) {
+    public void setDetails(String author, int price) {
         this.author = author;
         this.price = price;
     }

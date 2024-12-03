@@ -10,19 +10,18 @@ public class Course2 {
     private String[] syllabus;
     private int contentCount;
 
-    Course2() {
+    public Course2() {
         this.name = "";
         this.code = "";
         this.syllabus = new String[4];
-        this.contentCount = 0;
     }
 
-    void createCourse(String name, String code) {
+    public void createCourse(String name, String code) {
         this.name = name;
         this.code = code;
     }
 
-    void addContent(String... contents) {
+    public void addContent(String... contents) {
         for (String content : contents) {
             if (contentCount < 4) {
                 syllabus[contentCount] = content;
@@ -34,7 +33,7 @@ public class Course2 {
         }
     }
 
-    void printDetails() {
+    public void printDetails() {
         System.out.println("Course Details:");
         System.out.printf("Course Name: %s\n", this.name);
         System.out.printf("Course Code: %s\n", this.code);

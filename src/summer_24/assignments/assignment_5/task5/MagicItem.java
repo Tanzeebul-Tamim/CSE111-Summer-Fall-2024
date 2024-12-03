@@ -2,8 +2,8 @@ package summer_24.assignments.assignment_5.task5;
 
 public class MagicItem {
     private class Item {
-        String itemName;
-        int boost;
+        private String itemName;
+        private int boost;
 
         private Item(String itemName, int boost) {
             this.itemName = itemName;

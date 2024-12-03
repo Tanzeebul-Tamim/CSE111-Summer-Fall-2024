@@ -5,25 +5,20 @@ public class Parcel {
     public int weight;
     private double fee;
 
-    Parcel() {
+    public Parcel() {
         this.name = null;
-        this.weight = 0;
-        this.fee = 0;
     }
 
-    Parcel(String name) {
+    public Parcel(String name) {
         this.name = name;
-        this.weight = 0;
-        this.fee = 0;
     }
 
-    Parcel(String name, int weight) {
+    public Parcel(String name, int weight) {
         this.name = name;
         this.weight = weight;
-        this.fee = 0;
     }
 
-    void printDetails() {
+    public void printDetails() {
         if (this.name == null) {
             System.out.println("Set name first");
         } else {
@@ -33,12 +28,12 @@ public class Parcel {
         }
     }
 
-    void addWeight(int weight) {
+    public void addWeight(int weight) {
         this.weight += weight;
         System.out.printf("Updated Weight: %d\n", this.weight);
     }
 
-    void calcFee(String location) {
+    public void calcFee(String location) {
         int locationCharge = location.equals("Dhanmondi") ? 50 : 0;
 
         if (this.weight != 0) {

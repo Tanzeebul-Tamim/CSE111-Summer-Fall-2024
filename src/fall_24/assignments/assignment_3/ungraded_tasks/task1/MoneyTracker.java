@@ -6,13 +6,6 @@ public class MoneyTracker {
     private float lastAdded;
     private float lastSpent;
 
-    MoneyTracker() {
-        name = null;
-        balance = 0;
-        lastAdded = 0;
-        lastSpent = 0;
-    }
-
     public void createTracker(String name) {
         this.name = name;
         this.balance = 1;

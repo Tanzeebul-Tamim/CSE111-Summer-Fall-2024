@@ -6,21 +6,19 @@ public class ABCServer {
     private int memberCount;
     private String[][] members;
 
-    ABCServer() {
+    public ABCServer() {
         this.name = "Default";
         this.capacity = 10;
-        this.memberCount = 0;
         this.members = new String[this.capacity][2];
     }
 
-    ABCServer(String name, int capacity) {
+    public ABCServer(String name, int capacity) {
         this.name = name;
         this.capacity = capacity;
-        this.memberCount = 0;
         this.members = new String[this.capacity][2];
     }
 
-    void details() {
+    public void details() {
         System.out.printf("Server Name: %s\n", this.name);
         System.out.printf("Member Capacity: %d\n", this.capacity);
         System.out.printf("Total Members: %d\n", this.memberCount);
@@ -36,11 +34,11 @@ public class ABCServer {
         }
     }
 
-    void addMembers(String name) {
+    public void addMembers(String name) {
         addMembers(name, "Rising Hero");
     }
 
-    void addMembers(String name, String role) {
+    public void addMembers(String name, String role) {
         if (this.memberCount == this.capacity) {
             System.out.println("Sorry, maximum capacity exceeded!");
         } else {

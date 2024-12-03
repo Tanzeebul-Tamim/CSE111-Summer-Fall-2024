@@ -7,14 +7,14 @@ public class ChickenBurger {
     public String spiceLevel;
     private String[] spiceLevels = { "Mild", "Spicy", "Naga", "Extreme" };
 
-    ChickenBurger() {
+    public ChickenBurger() {
         this.bun = "Sesame";
         this.price = 200;
         this.sauceOption = "Less";
         this.spiceLevel = "Not Set";
     }
 
-    String serveBurger() {
+    public String serveBurger() {
         String result;
 
         if (this.spiceLevel.equals("Not Set")) {
@@ -27,7 +27,7 @@ public class ChickenBurger {
         return result;
     }
 
-    void customizeSpiceLevel(String spiceLevel) {
+    public void customizeSpiceLevel(String spiceLevel) {
         boolean isLevelValid = false;
 
         for (String spiceLvl : this.spiceLevels) {

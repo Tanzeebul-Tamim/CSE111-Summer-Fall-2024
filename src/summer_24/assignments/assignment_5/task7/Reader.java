@@ -8,8 +8,6 @@ public class Reader {
 
     public Reader() {
         this.name = "New user";
-        this.capacity = 0;
-        this.bookCount = 0;
     }
 
     public void createReader(String name, int capacity) {

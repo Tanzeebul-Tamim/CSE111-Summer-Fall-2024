@@ -10,7 +10,6 @@ public class Course {
         this.name = "";
         this.code = "";
         this.syllabus = new String[4];
-        this.contentCount = 0;
     }
 
     public void updateDetails(String name, String code) {

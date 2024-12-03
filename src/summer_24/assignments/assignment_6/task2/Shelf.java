@@ -4,17 +4,12 @@ public class Shelf {
     public int capacity;
     private int bookCount;
 
-    Shelf() {
-        this.capacity = 0;
-        this.bookCount = 0;
-    }
-
-    void showDetails() {
+    public void showDetails() {
         System.out.printf("Shelf capacity: %d\n", this.capacity);
         System.out.printf("Number of books: %d\n", this.bookCount);
     }
 
-    void addBooks(int bookCount) {
+    public void addBooks(int bookCount) {
         int remainingSlots = this.capacity - this.bookCount;
 
         if (this.capacity == 0) {

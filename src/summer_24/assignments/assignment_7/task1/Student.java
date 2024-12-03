@@ -1,27 +1,27 @@
 package summer_24.assignments.assignment_7.task1;
 
 public class Student {
-    String name;
-    String prog;
+    public String name;
+    public String prog;
 
-    Student(String name, String prog) {
+    public Student(String name, String prog) {
         this.name = name;
         this.prog = prog;
     }
 
-    void updateName(String name) {
+    public void updateName(String name) {
         this.name = name;
     }
 
-    void updateProgram(String prog) {
+    public void updateProgram(String prog) {
         this.prog = prog;
     }
 
-    String accessName() {
+    public String accessName() {
         return this.name;
     }
 
-    String accessProgram() {
+    public String accessProgram() {
         return this.prog;
     }
 }

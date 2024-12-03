@@ -5,24 +5,23 @@ public class Product {
     private double price;
     private int quantity;
 
-    Product() {
+    public Product() {
         this.name = "Unknown";
-        this.price = 0;
         this.quantity = 1;
     }
 
-    Product(String name, double price) {
+    public Product(String name, double price) {
         this.name = name;
         this.price = price;
         this.quantity = 1;
     }
 
-    void displayInfo() {
+    public void displayInfo() {
         System.out.printf("Product Name: %s\n", this.name);
         System.out.printf("Price: $%.1f", this.price);
     }
 
-    void displayInfo(boolean quantity) {
+    public void displayInfo(boolean quantity) {
         displayInfo();
 
         if (quantity) {
@@ -30,15 +29,15 @@ public class Product {
         }
     }
 
-    void setQuantity(int quantity) {
+    public void setQuantity(int quantity) {
         this.quantity = quantity;
     }
 
-    double getPrice() {
+    public double getPrice() {
         return this.price;
     }
 
-    int getQuantity() {
+    public int getQuantity() {
         return this.quantity;
     }
 }

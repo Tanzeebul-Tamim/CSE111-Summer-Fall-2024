@@ -5,16 +5,12 @@ public class MobilePhone {
     private int contactCount;
     private String[][] contactList;
 
-    MobilePhone() {
-        this.contactCount = 0;
-    }
-
-    void setContactCapacity(int capacity) {
+    public void setContactCapacity(int capacity) {
         this.capacity = capacity;
         this.contactList = new String[capacity][2];
     }
 
-    void details() {
+    public void details() {
         System.out.printf("Total Contacts: %d\n", this.contactCount);
         System.out.printf("Contact List:\n");
 
@@ -25,7 +21,7 @@ public class MobilePhone {
         }
     }
 
-    void addContact(String name, int contactNo) {
+    public void addContact(String name, int contactNo) {
         if (this.contactCount == this.capacity) {
             System.out.println("Storage Full!!");
         } else {
@@ -37,7 +33,7 @@ public class MobilePhone {
         }
     }
 
-    void makeCall(int contactNo) {
+    public void makeCall(int contactNo) {
         boolean found = false;
 
         for (String[] contact : contactList) {
