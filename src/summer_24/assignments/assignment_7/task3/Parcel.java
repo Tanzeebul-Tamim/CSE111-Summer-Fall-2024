@@ -6,11 +6,11 @@ public class Parcel {
     private double fee;
 
     public Parcel() {
-        this.name = null;
+        this(null, 0);
     }
 
     public Parcel(String name) {
-        this.name = name;
+        this(name, 0);
     }
 
     public Parcel(String name, int weight) {

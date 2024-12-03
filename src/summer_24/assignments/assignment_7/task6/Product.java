@@ -6,8 +6,7 @@ public class Product {
     private int quantity;
 
     public Product() {
-        this.name = "Unknown";
-        this.quantity = 1;
+        this("Unknown", 0);
     }
 
     public Product(String name, double price) {

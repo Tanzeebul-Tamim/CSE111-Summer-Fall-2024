@@ -1,17 +1,6 @@
 package fall_24.assignments.assignment_3.graded_tasks.task7;
 
 public class Cart {
-    private class Item {
-        private String itemName;
-        private double itemPrice;
-        private double discountPrice;
-
-        private Item(String itemName, double itemPrice) {
-            this.itemName = itemName;
-            this.itemPrice = itemPrice;
-        }
-    }
-
     private int cartNo;
     private int itemCount;
     private Item[] items;
@@ -24,6 +13,17 @@ public class Cart {
         this.items = new Item[3];
         this.itemNames = new String[3];
         this.itemPrices = new double[3];
+    }
+
+    private class Item {
+        private String itemName;
+        private double itemPrice;
+        private double discountPrice;
+
+        private Item(String itemName, double itemPrice) {
+            this.itemName = itemName;
+            this.itemPrice = itemPrice;
+        }
     }
 
     public void create_cart(int cartNo) {

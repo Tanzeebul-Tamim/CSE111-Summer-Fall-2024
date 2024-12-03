@@ -9,6 +9,14 @@ public class Student {
     private double cgpa;
     private String department;
 
+    public Student(String name, double cgpa) {
+        this.id = ++totalStudent;
+        this.name = name;
+        this.cgpa = cgpa;
+        this.department = "CSE";
+        cseStudent++;
+    }
+
     public static Student createStudent(String name, double cgpa, String department) {
         Student newStudent = new Student(name, cgpa);
         newStudent.department = department;
@@ -18,14 +26,6 @@ public class Student {
         }
 
         return newStudent;
-    }
-
-    public Student(String name, double cgpa) {
-        this.id = ++totalStudent;
-        this.name = name;
-        this.cgpa = cgpa;
-        this.department = "CSE";
-        cseStudent++;
     }
 
     public static void printDetails() {

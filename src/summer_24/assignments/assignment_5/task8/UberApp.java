@@ -8,10 +8,6 @@ public class UberApp {
     private String[] rideHistory;
 
     public UberApp() {
-        this.name = null;
-        this.age = -1;
-        this.contactNo = null;
-        this.rideCount = 0;
         this.rideHistory = new String[3];
     }
 

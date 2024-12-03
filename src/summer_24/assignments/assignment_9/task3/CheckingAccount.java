@@ -4,8 +4,7 @@ public class CheckingAccount extends Account {
     public static int count;
 
     public CheckingAccount() {
-        super(0);
-        count++;
+        this(count);
     }
 
     public CheckingAccount(double balance) {

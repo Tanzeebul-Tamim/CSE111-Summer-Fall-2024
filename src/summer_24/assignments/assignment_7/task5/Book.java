@@ -6,12 +6,11 @@ public class Book {
     private int price;
 
     public Book(String title) {
-        this.title = title;
+        this(title, null, 0);
     }
 
     public Book(String title, String author) {
-        this.title = title;
-        this.author = author;
+        this(title, author, 0);
     }
 
     public Book(String title, String author, int price) {

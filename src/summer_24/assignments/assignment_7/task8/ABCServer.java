@@ -7,9 +7,7 @@ public class ABCServer {
     private String[][] members;
 
     public ABCServer() {
-        this.name = "Default";
-        this.capacity = 10;
-        this.members = new String[this.capacity][2];
+        this("Default", 10);
     }
 
     public ABCServer(String name, int capacity) {

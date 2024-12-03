@@ -7,8 +7,7 @@ public class Student {
     private int courseCount;
 
     public Student(int id) {
-        this.id = id;
-        this.courses = new String[4];
+        this(id, 0);
     }
 
     public Student(int id, double cgpa) {
