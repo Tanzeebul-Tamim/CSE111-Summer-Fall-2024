@@ -36,7 +36,7 @@ public class Student {
 
   public void addCourse(String course) {
     if (cgpa == 0) {
-      System.out.printf("Failed to add %s\nSet CG first", course);
+      System.out.printf("Failed to add %s\nSet CG first\n", course);
     } else {
       if (this.cgpa < 3 && this.courseCount == 3) {
         System.out.printf("Failed to add %s\n", course);

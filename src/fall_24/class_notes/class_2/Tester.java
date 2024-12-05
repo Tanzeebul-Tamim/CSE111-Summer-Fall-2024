@@ -1,6 +1,7 @@
 package fall_24.class_notes.class_2;
 
 public class Tester {
+    @SuppressWarnings("unused")
     public static void main(String[] args) {
         int i; // Declaration only (Memory is allocated for variable 'i')
         i = 5; // Initialization (Assigning a value to 'i')

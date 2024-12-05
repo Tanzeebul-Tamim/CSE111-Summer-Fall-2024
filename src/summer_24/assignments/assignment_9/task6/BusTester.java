@@ -4,6 +4,7 @@ public class BusTester {
     public static void main(String[] args) {
         Bus b1 = new Bus(4, "Jatrabari");
         System.out.println("1--------------");
+        @SuppressWarnings("unused")
         Bus b2 = new Bus(10, "Gazipur");
         System.out.println("2--------------");
         b1.addPassenger("Fahim", "Mirpur");

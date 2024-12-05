@@ -3,6 +3,7 @@ package fall_24.class_notes.class_3;
 import java.util.Scanner; // Importing Scanner class to handle user input
 
 public class tester2 {
+    @SuppressWarnings({ "resource", "unused" })
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in); // Creating a Scanner object 's' for reading console input
 

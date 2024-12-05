@@ -24,6 +24,7 @@ public class Tracing {
         return this.b;
     }
 
+    @SuppressWarnings("static-access")
     public void methodB(Tracing t1) {
         t1.b = this.y - t1.b + this.b;
         System.out.println(t1.a + " " + t1.b + " " + x);

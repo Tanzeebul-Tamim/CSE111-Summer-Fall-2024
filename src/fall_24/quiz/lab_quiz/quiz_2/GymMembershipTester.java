@@ -56,6 +56,7 @@ public class GymMembershipTester {
         System.out.println("5==============================");
         GymMembership gm3 = new GymMembership();
         gm3.setGymDetails("Pamella", "Standard", "Morning", 6);
+        @SuppressWarnings("unused")
         double fee3 = gm3.calculateFee();
         gm3.printDetails();
     }

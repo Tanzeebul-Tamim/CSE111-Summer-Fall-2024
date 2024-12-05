@@ -37,6 +37,6 @@ public class Shape2D {
     }
 
     public void area() {
-        System.out.format("The area of the %s is: %.2f\n", this.shapeName, this.area);
+        System.out.format("The area of the %s is: %.1f\n", this.shapeName, this.area);
     }
 }

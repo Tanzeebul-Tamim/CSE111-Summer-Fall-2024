@@ -19,6 +19,7 @@ public class Quiz3A {
         System.out.println(Quiz3A.y + " " + temp + " " + y);
     }
 
+    @SuppressWarnings("static-access")
     public int methodB(int m, int n) {
         int x = 0;
         y = this.y + m + (++temp);

@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.Scanner; // Importing Scanner for user input
 
 public class tester4 {
+    @SuppressWarnings("resource")
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in); // Creating Scanner object 's' to read input from console
 

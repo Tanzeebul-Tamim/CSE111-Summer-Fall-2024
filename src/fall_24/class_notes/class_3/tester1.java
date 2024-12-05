@@ -4,6 +4,7 @@ import java.util.Scanner; // Importing Scanner class to enable input from the us
 
 public class tester1 {
     public static void main(String[] args) {
+        @SuppressWarnings("resource")
         Scanner s = new Scanner(System.in); // Creating a Scanner object 's' to read input from the console
 
         int i = s.nextInt();
