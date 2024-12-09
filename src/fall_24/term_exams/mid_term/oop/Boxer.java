@@ -22,12 +22,12 @@ public class Boxer {
     }
 
     public void showDetails() {
-        System.out.printf("Name: %s, Weight: %.1f KG\n", this.name, this.weight);
+        System.out.printf("Name: %s, Weight: %.2f KG\n", this.name, this.weight);
 
         if (this.fights == 0) {
             System.out.println("No fights yet.");
         } else {
-            System.out.println("Fights:");
+            System.out.println("Fight history:");
 
             for (int i = 0; i < fights; i++) {
                 String opponent = this.opponents[i];
@@ -40,7 +40,7 @@ public class Boxer {
 
     public void fight(String opponent, boolean result) {
         if (fights >= totalMatch) {
-            System.out.printf("Cannot fight more than %d opponents\n", this.totalMatch);
+            System.out.printf("Cannot fight more than %d opponent(s)\n", this.totalMatch);
         } else {
             this.opponents[fights] = opponent;
             this.results[fights] = result;
@@ -58,7 +58,7 @@ public class Boxer {
         fight(opponent, false);
     }
 
-    public String winMatchRatio() {
+    public String winLossRatio() {
         int w = this.won;
         int l = this.lost;
 
@@ -75,7 +75,7 @@ public class Boxer {
         w = this.won / w;
         l = this.lost / l;
 
-        String output = "Career Stats:\nWon:Lost - " + w + ":" + l;
+        String output = "Career Stats: " + w + ":" + l;
         return output;
     }
 }

@@ -1,64 +1,61 @@
 package fall_24.term_exams.mid_term.oop;
 
 /*
-    Design the Boxer class so that the following output is produced while running the BoxerTester class:
+    Design a class called Boxer With appropriate attributes and features so that the driver code below generates the expected output.
+    [NOTE: winLossRatio( ) should calculate the ratio of fights won to fights lost, based on the total number of fights attempted.]
 
     Output:
 
-    Tyson can fight 3 opponents.
-    Name: Tyson, Weight: 100.4 KG
+    Jake can fight 3 opponents.
+    ==========1==========
+    Name: Jake, Weight: 102.95 KG
     No fights yet.
-    1==============================
-    Cannot fight more than 3 opponents
-    Name: Tyson, Weight: 100.4 KG
-    Fights:
-    vs Johnson: Lost
-    vs Wilder: Won
-    vs Fury: Lost
-    2==============================
-    Career Stats:
-    Won:Lost - 1:2
-    3==============================
-    Jake can fight 5 opponents.
-    Cannot fight more than 5 opponents
-    4==============================
-    Name: Jake, Weight: 84.3 KG
-    Fights:
-    vs KSI: Won
-    vs Logan: Lost
-    vs Ben: Lost
-    vs Askren: Won
-    vs Fury: Lost
-    5==============================
-    Career Stats:
-    Won:Lost - 2:3
+    ==========2==========
+    ==========3==========
+    Name: Jake, Weight: 102.95 KG
+    Fight history:
+    vs Deji: Won
+    ==========4==========
+    Career Stats: 1:1
+    ==========5==========
+    Name: Jake, Weight: 102.95 KG
+    Fight history:
+    vs Deji: Won
+    vs Tommy: Lost
+    vs Felix: Lost
+    ==========6==========
+    Cannot fight more than 3 opponent(s)
+    ==========7==========
+    Name: Jake, Weight: 102.95 KG
+    Fight history:
+    vs Deji: Won
+    vs Tommy: Lost
+    vs Felix: Lost
+    ==========8==========
+    Career Stats: 1:2
 */
 
 public class BoxerTester {
     public static void main(String[] args) {
-        Boxer boxer1 = new Boxer();
-        boxer1.updateDetails("Tyson", 100.4, 3);
-        boxer1.showDetails();
-        System.out.println("1==============================");
-        boxer1.fight("Johnson", false);
-        boxer1.fight("Wilder", true);
-        boxer1.fight("Fury", false);
-        boxer1.fight("Joshua", true);
-        boxer1.showDetails();
-        System.out.println("2==============================");
-        System.out.println(boxer1.winMatchRatio());
-        System.out.println("3==============================");
-        Boxer boxer2 = new Boxer();
-        boxer2.updateDetails("Jake", 84.3, 5);
-        boxer2.fight("KSI", true);
-        boxer2.fight("Logan");
-        boxer2.fight("Ben", false);
-        boxer2.fight("Askren", true);
-        boxer2.fight("Fury");
-        boxer2.fight("Tommy", true);
-        System.out.println("4==============================");
-        boxer2.showDetails();
-        System.out.println("5==============================");
-        System.out.println(boxer2.winMatchRatio());
+        Boxer jake = new Boxer();
+        jake.updateDetails("Jake", 102.95, 3);
+        System.out.println("==========1==========");
+        jake.showDetails();
+        System.out.println("==========2==========");
+        jake.fight("Deji", true);
+        System.out.println("==========3==========");
+        jake.showDetails();
+        jake.fight("Tommy", false);
+        System.out.println("==========4==========");
+        System.out.println(jake.winLossRatio());
+        System.out.println("==========5==========");
+        jake.fight("Felix");
+        jake.showDetails();
+        System.out.println("==========6==========");
+        jake.fight("Mike", true);
+        System.out.println("==========7==========");
+        jake.showDetails();
+        System.out.println("==========8==========");
+        System.out.println(jake.winLossRatio());
     }
 }

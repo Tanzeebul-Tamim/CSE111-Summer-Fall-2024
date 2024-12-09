@@ -2,45 +2,37 @@ package fall_24.term_exams.mid_term.array_string;
 
 /*
     Question:
-    A teacher wants to evaluate the students of their class by calculating group averages, 
-    but instead of all averages, the teacher is only interested in finding the maximum average 
-    from all possible groups. You are given:
-    
-    1. An array of integers representing the marks of the students in the class.
-    2. An integer `k` that specifies the number of students in each group.
 
-    Your task is to calculate the averages of all possible groups of size `k` in the array.
+    A teacher wants to evaluate the performance of students based on their marks. Instead of calculating the average marks for the entire section, the teacher is interested in finding the maximum average marks for the entire section, the teacher is interested in finding the maximum average marks among some groups of k consecutive students. Given an array of student's marks and a value k, write a Java program that calculates and prints the maximum average among groups of k consecutive student's marks. You code should work for any given array of positive integers.
+
+    [NOTE: You can assume the value of k will always be less than the length of the array]
 
     Sample Input 1:
-    int[] marks = {55, 45, 23, 56, 34, 67};
-    int k = 3;
+    int[] marks = { 12, 15, 20, 17, 20, 13 };
+    Enter value of k: 4
 
     Explanation:
-    - Groups of size `k=3`:
-        1. {55, 45, 23} -> Average = (55 + 45 + 23) / 3 = 41.0
-        2. {45, 23, 56} -> Average = (45 + 23 + 56) / 3 = 41.33
-        3. {23, 56, 34} -> Average = (23 + 56 + 34) / 3 = 37.67
-        4. {56, 34, 67} -> Average = (56 + 34 + 67) / 3 = 52.33
-    - Maximum Average = 52.33
+        (12 + 15 + 20 + 17) / 4 = 16.0
+        (15 + 20 + 17 + 20) / 4 = 18.0
+        (20 + 17 + 20 + 13) / 4 = 17.5
+        Among 16.0, 18.0 and 17.5, 18.0 is the maximum average.
 
     Sample Output 1:
-    Max Average:
-    52.33
+    Max Avg:
+    18.0
 
     Sample Input 2:
-    int[] marks = {70, 80, 90, 60};
-    int k = 2;
+    int[] marks = { 13, 11, 19, 17, 16, 15, 18, 11 };
+    Enter value of k: 7
 
     Explanation:
-    - Groups of size `k=2`:
-        1. {70, 80} -> Average = (70 + 80) / 2 = 75.0
-        2. {80, 90} -> Average = (80 + 90) / 2 = 85.0
-        3. {90, 60} -> Average = (90 + 60) / 2 = 75.0
-    - Maximum Average = 85.0
+        (13 + 11 + 19 + 17 + 16 + 15 + 18) / 7 = 15.57
+        (11 + 19 + 17 + 16 + 15 + 18 + 11) / 7 = 15.28
+        Among 15.57 and 15.28, 15.57 is the maximum average.
 
     Sample Output 2:
-    Max Average:
-    85.00
+    Max Avg:
+    15.57
 */
 
 public class Average {
@@ -71,13 +63,17 @@ public class Average {
                 }
             }
 
-            System.out.printf("Max Average:\n%.2f\n", max);
+            System.out.printf("Max Avg:\n%.2f\n", max);
         }
     }
 
     public static void main(String[] args) {
-        int[] marks = { 55, 45, 23, 56, 34, 67 };
-        int k = 3;
-        calc(marks, k);
+        int[] marks1 = { 12, 15, 20, 17, 20, 13 };
+        int k1 = 4;
+        calc(marks1, k1);
+
+        int[] marks2 = { 13, 11, 19, 17, 16, 15, 18, 11 };
+        int k2 = 7;
+        calc(marks2, k2);
     }
 }
