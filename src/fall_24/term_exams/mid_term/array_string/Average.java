@@ -1,5 +1,7 @@
 package fall_24.term_exams.mid_term.array_string;
 
+import java.util.Scanner;
+
 /*
     Question:
 
@@ -68,12 +70,13 @@ public class Average {
     }
 
     public static void main(String[] args) {
-        int[] marks1 = { 12, 15, 20, 17, 20, 13 };
-        int k1 = 4;
-        calc(marks1, k1);
-
+        Scanner sc = new Scanner(System.in);
         int[] marks2 = { 13, 11, 19, 17, 16, 15, 18, 11 };
-        int k2 = 7;
+
+        System.out.println("Enter the number of students in each group:");
+        int k2 = sc.nextInt();
+
         calc(marks2, k2);
+        sc.close();
     }
 }

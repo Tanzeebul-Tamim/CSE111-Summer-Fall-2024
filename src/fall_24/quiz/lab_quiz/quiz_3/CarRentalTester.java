@@ -1,83 +1,64 @@
 package fall_24.quiz.lab_quiz.quiz_3;
 
 /*
-    Design the CarRental class so that the following output is produced while running the CarRentalTester class:
+    Design a CarRental class based on the given tester code and output.
+        - You should keep the car types and their availability in two separate arrays.
+        - Your code should work even if the car types were changed.
 
     Output:
 
-    Car Rental Name: Not Set
+    1==================
+    Car Rental Name: Unnamed
     Location: Default
-    Available number of SUV cars: 15
-    Available number of Sedan cars: 20
-    Available number of Hatchback cars: 10
-    Available number of Electric cars: 12
-    Available number of Hybrid cars: 16
-    1==============================
-    Car Rental Name: Premium Rentals
+    Available number of Sedan: 20
+    Available number of SUV: 15
+    Available number of Hatchback: 16
+    Available number of Luxury: 5
+    Available number of Van: 8
+    2==================
+    Name and location have been updated
+    3==================
+    Successfully rented 3 SUV cars.
+    Successfully rented 4 Luxury cars.
+    Successfully rented 5 Hatchback cars.
+    Successfully rented 10 Sedan cars.
+    4==================
+    Car Rental Name: City Rental
     Location: Dhaka
-    Available number of SUV cars: 15
-    Available number of Sedan cars: 20
-    Available number of Hatchback cars: 10
-    Available number of Electric cars: 12
-    Available number of Hybrid cars: 16
-    2==============================
-    5 Electric cars rented successfully.
-    3==============================
-    Car Rental Name: Premium Rentals
+    Available number of Sedan: 10
+    Available number of SUV: 12
+    Available number of Hatchback: 11
+    Available number of Luxury: 1
+    Available number of Van: 8
+    5==================
+    2 Luxury cars are not available. Cannot rent.
+    6==================
+    Car Rental Name: City Rental
     Location: Dhaka
-    Available number of SUV cars: 15
-    Available number of Sedan cars: 20
-    Available number of Hatchback cars: 10
-    Available number of Electric cars: 7
-    Available number of Hybrid cars: 16
-    4==============================
-    18 Hybrid cars is not available.
-    5==============================
-    We don't have any Sports cars for rent.
-    6==============================
-    5 Hatchback cars rented successfully.
-    7==============================
-    Car Rental Name: Premium Rentals
-    Location: Dhaka
-    Available number of SUV cars: 15
-    Available number of Sedan cars: 20
-    Available number of Hatchback cars: 5
-    Available number of Electric cars: 7
-    Available number of Hybrid cars: 16
-    7==============================
-    Car Rental Name: Budget Rentals
-    Location: Chittagong
-    Available number of SUV cars: 15
-    Available number of Sedan cars: 20
-    Available number of Hatchback cars: 10
-    Available number of Electric cars: 12
-    Available number of Hybrid cars: 16
+    Available number of Sedan: 10
+    Available number of SUV: 12
+    Available number of Hatchback: 11
+    Available number of Luxury: 1
+    Available number of Van: 8
 */
 
 public class CarRentalTester {
     public static void main(String[] args) {
         CarRental cr1 = new CarRental();
-        cr1.showDetails();
-        System.out.println("1==============================");
-        cr1.setName("Premium Rentals");
-        cr1.setLocation("Dhaka");
-        cr1.showDetails();
-        System.out.println("2==============================");
-        cr1.rentCar(5, "Electric");
-        System.out.println("3==============================");
-        cr1.showDetails();
-        System.out.println("4==============================");
-        cr1.rentCar(18, "Hybrid");
-        System.out.println("5==============================");
-        cr1.rentCar("Sports");
-        System.out.println("6==============================");
+        System.out.println("1==================");
+        cr1.printDetails();
+        System.out.println("2==================");
+        System.out.println(cr1.updateDetails("City Rental", "Dhaka"));
+        System.out.println("3==================");
+        cr1.rentCar(3, "SUV");
+        cr1.rentCar(4, "Luxury");
         cr1.rentCar("Hatchback");
-        System.out.println("7==============================");
-        cr1.showDetails();
-        System.out.println("7==============================");
-        CarRental cr2 = new CarRental();
-        cr2.setName("Budget Rentals");
-        cr2.setLocation("Chittagong");
-        cr2.showDetails();
+        cr1.rentCar(10, "Sedan");
+        System.out.println("4==================");
+        cr1.printDetails();
+        System.out.println("5==================");
+        cr1.rentCar(2, "Luxury");
+        System.out.println("6==================");
+        cr1.printDetails();
     }
 }

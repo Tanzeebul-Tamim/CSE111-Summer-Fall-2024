@@ -1,7 +1,7 @@
 package fall_24.quiz.lab_quiz.quiz_2;
 
 /*
-    Design the GymMembership class so that the following output is produced while running theGymMembershipTester class:
+    Design the GymMembership class so that the following output is produced while running the GymMembershipTester class:
 
     Output:
 

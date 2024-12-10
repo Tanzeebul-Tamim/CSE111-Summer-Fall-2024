@@ -7,21 +7,13 @@ public class CarRental {
     private int[] availability;
 
     public CarRental() {
-        this.name = "Not Set";
+        this.name = "Unnamed";
         this.location = "Default";
-        this.carTypes = new String[] { "SUV", "Sedan", "Hatchback", "Electric", "Hybrid" };
-        this.availability = new int[] { 15, 20, 10, 12, 16 };
+        this.carTypes = new String[] { "Sedan", "SUV", "Hatchback", "Luxury", "Van" };
+        this.availability = new int[] { 20, 15, 16, 5, 8 };
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setLocation(String location) {
-        this.location = location;
-    }
-
-    public void showDetails() {
+    public void printDetails() {
         System.out.printf("Car Rental Name: %s\n", this.name);
         System.out.printf("Location: %s\n", this.location);
 
@@ -29,8 +21,15 @@ public class CarRental {
             String carType = this.carTypes[i];
             int count = this.availability[i];
 
-            System.out.printf("Available number of %s cars: %d\n", carType, count);
+            System.out.printf("Available number of %s: %d\n", carType, count);
         }
+    }
+
+    public String updateDetails(String name, String location) {
+        this.name = name;
+        this.location = location;
+
+        return "Name and location have been updated.";
     }
 
     public void rentCar(int count, String carType) {
@@ -49,9 +48,9 @@ public class CarRental {
 
         if (found) {
             if (count > this.availability[idx]) {
-                System.out.printf("%d %s cars is not available.\n", count, carType);
+                System.out.printf("%d %s cars are not available. Cannot rent.\n", count, carType);
             } else {
-                System.out.printf("%d %s cars rented successfully.\n", count, carType);
+                System.out.printf("Successfully rented %d %s cars.\n", count, carType);
                 this.availability[idx] -= count;
             }
         } else {
