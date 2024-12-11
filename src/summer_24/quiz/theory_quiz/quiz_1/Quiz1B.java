@@ -1,4 +1,4 @@
-package summer_24.quiz.theory_quiz.quiz1;
+package summer_24.quiz.theory_quiz.quiz_1;
 
 /*
     Write a java program that reads an input number N, then calculates X from the following formula:

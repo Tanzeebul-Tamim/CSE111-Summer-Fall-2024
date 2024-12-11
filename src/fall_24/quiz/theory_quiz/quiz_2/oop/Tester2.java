@@ -1,4 +1,4 @@
-package summer_24.quiz.theory_quiz.quiz3;
+package fall_24.quiz.theory_quiz.quiz_2.oop;
 
 /*
     Carefully observe the following driver code and expected output to design the Series class.
@@ -11,18 +11,18 @@ package summer_24.quiz.theory_quiz.quiz3;
     Show name: [BLANK]
     Total Episodes: -1
     Genre: NONE
-    Show is watched.
+    Show is watched
     Updated information for the show: Wednesday
     Show name: Wednesday
     Total Episodes: 15
     Genre: Mystery, Supernatural
-    Show is not watched.
+    Show is not watched
     ========2========
     Updated information for the show: Dark
     Show name: Dark
     Total Episodes: 10
-    Genre: Mind-Bending, Sci-fi
-    Show is not watched.
+    Genre: Sci-fi
+    Show is not watched
     ========3========
     Watching 10 episodes of Wednesday
     Finished show after watching 10 episodes of Dark
@@ -31,7 +31,7 @@ package summer_24.quiz.theory_quiz.quiz3;
     Show name: Suits
     Total Episodes: 20
     Genre: Comedy, Courtroom
-    Show is not watched.
+    Show is not watched
     Watching 2 episodes of Wednesday
     You have watched 12 episodes of Wednesday
     Watching 15 episodes of Suits
@@ -40,15 +40,15 @@ package summer_24.quiz.theory_quiz.quiz3;
     Show name: Wednesday
     Total Episodes: 15
     Genre: Mystery, Supernatural
-    Show is watched.
+    Show is watched
     Show name: Dark
     Total Episodes: 10
-    Genre: Mind-Bending, Sci-fi
-    Show is watched.
+    Genre: Sci-fi
+    Show is watched
     Show name: Suits
     Total Episodes: 20
     Genre: Comedy, Courtroom
-    Show is not watched.
+    Show is not watched
     ========6========
  */
 
@@ -61,7 +61,7 @@ public class Tester2 {
         System.out.println(s1.showDetails());
         System.out.println("========2========");
         Series s2 = new Series();
-        s2.updateInfo("Dark", "Mind-Bending, Sci-fi", 10);
+        s2.updateInfo("Dark", "Sci-fi", 10);
         System.out.println(s2.showDetails());
         System.out.println("========3========");
         s1.watchEpisodes(10);
@@ -81,3 +81,4 @@ public class Tester2 {
         System.out.println("========6========");
     }
 }
+

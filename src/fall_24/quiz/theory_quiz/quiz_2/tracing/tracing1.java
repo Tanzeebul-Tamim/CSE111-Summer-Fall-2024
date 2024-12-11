@@ -1,4 +1,4 @@
-package fall_24.quiz.theory_quiz.quiz2.tracing;
+package fall_24.quiz.theory_quiz.quiz_2.tracing;
 
 public class tracing1 {
     public static void main(String[] args) {

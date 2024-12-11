@@ -1,4 +1,4 @@
-package summer_24.quiz.lab_quiz.quiz4;
+package summer_24.quiz.lab_quiz.quiz_4;
 
 public class Pirate {
     String name = "empty";

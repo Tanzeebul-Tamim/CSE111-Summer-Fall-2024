@@ -1,4 +1,4 @@
-package fall_24.quiz.theory_quiz.quiz1;
+package summer_24.quiz.theory_quiz.quiz_2;
 
 /*
     For a smart diagnosis system, you need to write a java program to support the diagnosis from patients symptoms - which may repeat. Now, you were told that the most significant symptom is the one that occurs the most.
@@ -41,7 +41,7 @@ package fall_24.quiz.theory_quiz.quiz1;
 
 import java.util.Scanner;
 
-public class Quiz1 {
+public class Quiz2A {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
@@ -55,26 +55,26 @@ public class Quiz1 {
         for (int i = 0; i < N; i++) {
             symptoms[i] = sc.nextLine();
         }
-
+        
         String mostRecurringSymptom = null;
         int maxCount = 0;
-
+        
         for (int i = 0; i < N; i++) {
             String currentSymptom = symptoms[i];
             int count = 0;
-
+            
             for (int j = 0; j < N; j++) {
                 if (symptoms[j].equals(currentSymptom)) {
                     count++;
                 }
             }
-
+            
             if (count > maxCount) {
                 maxCount = count;
                 mostRecurringSymptom = currentSymptom;
             }
         }
-
+        
         System.out.printf("\nThe most recurring symptom is the %s.\n", mostRecurringSymptom);
         sc.close();
     }

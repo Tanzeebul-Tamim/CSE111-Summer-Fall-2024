@@ -1,4 +1,4 @@
-package fall_24.quiz.theory_quiz.quiz2.oop;
+package fall_24.quiz.theory_quiz.quiz_2.oop;
 
 public class Series {
     public String title;

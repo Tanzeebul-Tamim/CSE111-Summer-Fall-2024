@@ -1,4 +1,4 @@
-package fall_24.quiz.theory_quiz.quiz2.array_string;
+package fall_24.quiz.theory_quiz.quiz_2.array_string;
 
 /*
     Suppose you are working with a Company for developing a DNA sequence recognizing software. DNA can be represented with a sequence consisting of proteins: A, T, C and G in many combinations. Your tasks are:

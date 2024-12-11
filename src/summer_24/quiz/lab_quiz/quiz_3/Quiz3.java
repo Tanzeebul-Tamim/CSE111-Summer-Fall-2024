@@ -1,4 +1,4 @@
-package summer_24.quiz.lab_quiz;
+package summer_24.quiz.lab_quiz.quiz_3;
 
 /*
     Write a Java program that takes two integers as input from the user and determines which number has more odd digits.

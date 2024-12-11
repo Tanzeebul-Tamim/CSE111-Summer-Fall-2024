@@ -1,4 +1,4 @@
-package summer_24.quiz.lab_quiz.quiz4;
+package summer_24.quiz.lab_quiz.quiz_4;
 
 /*
     Design the Pirate class such that the `main` method produces the following output

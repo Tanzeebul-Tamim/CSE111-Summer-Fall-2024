@@ -1,4 +1,4 @@
-package summer_24.quiz.lab_quiz;
+package summer_24.quiz.lab_quiz.quiz_2;
 
 /*
     Write a Java program that takes a string input from the user and converts the first character of each sentence

@@ -1,4 +1,4 @@
-package summer_24.quiz.theory_quiz.quiz2;
+package summer_24.quiz.theory_quiz.quiz_2;
 
 /*
     For a smart diagnosis system, you need to write a java program to support the diagnosis from patients symptoms - which may repeat. Now, you were once told that the most important symptom is the one that has more letters in its name, especially considering the sum of the ascii numbers of those letters.

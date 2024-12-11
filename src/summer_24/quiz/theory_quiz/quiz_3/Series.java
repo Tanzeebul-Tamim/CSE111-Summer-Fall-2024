@@ -1,4 +1,4 @@
-package summer_24.quiz.theory_quiz.quiz3;
+package summer_24.quiz.theory_quiz.quiz_3;
 
 public class Series {
     String title = "[BLANK]";
