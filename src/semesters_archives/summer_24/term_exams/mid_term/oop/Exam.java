@@ -1,4 +1,4 @@
-package semesters_archives.summer_24.term_exams.mid.oop;
+package semesters_archives.summer_24.term_exams.mid_term.oop;
 
 public class Exam {
     private String eName;
