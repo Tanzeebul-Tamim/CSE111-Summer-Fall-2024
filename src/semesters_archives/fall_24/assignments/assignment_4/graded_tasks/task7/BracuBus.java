@@ -37,8 +37,7 @@ public class BracuBus {
                     if (passenger.residence.equals(this.route)) {
                         System.out.printf("%s boarded the bus.\n", passenger.name);
 
-                        this.passengers[count] = passenger;
-                        this.count++;
+                        this.passengers[this.count++] = passenger;
                     } else {
                         System.out.println("You got on the wrong bus!");
                     }

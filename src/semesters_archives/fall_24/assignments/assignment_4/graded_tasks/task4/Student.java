@@ -45,8 +45,7 @@ public class Student {
         System.out.printf("Failed to add %s\n", course);
         System.out.println("Maximum 4 courses allowed.");
       } else {
-        this.courses[this.courseCount] = course;
-        this.courseCount++;
+        this.courses[this.courseCount++] = course;
       }
     }
   }
@@ -60,12 +59,10 @@ public class Student {
   public void showAdvisee() {
     System.out.printf("Student ID: %d, CGPA: %.1f\n", this.id, this.cgpa);
 
-    if (courseCount > 0) {
+    if (this.courseCount > 0) {
       System.out.println("Added courses are:");
 
-      for (int i = 0; i < this.courses.length; i++) {
-        String course = this.courses[i];
-
+      for (String course : this.courses) {
         if (course != null) {
           System.out.print(course + " ");
         }

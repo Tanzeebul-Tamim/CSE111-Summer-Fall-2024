@@ -29,8 +29,7 @@ public class Usis {
                     System.out.println("You need special approval to take more than 3 courses.");
                 } else {
                     user.courses = courses;
-                    this.users[this.totalAdvisee] = user;
-                    this.totalAdvisee++;
+                    this.users[this.totalAdvisee++] = user;
 
                     System.out.println("Advising successful!");
                 }
