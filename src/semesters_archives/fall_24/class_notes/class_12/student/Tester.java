@@ -2,6 +2,7 @@ package semesters_archives.fall_24.class_notes.class_12.student;
 
 // Class to test the Student class
 public class Tester {
+    @SuppressWarnings("static-access")
     public static void main(String[] args) {
         Student s1 = new Student(); // Create the first student instance
         s1.name = "Asif"; // Assign the name "Asif" to the first student
