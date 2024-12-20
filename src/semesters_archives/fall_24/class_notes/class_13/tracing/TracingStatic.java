@@ -7,6 +7,7 @@ public class TracingStatic {
         A a2 = new A(-5, -7);
         a1.methodA(1, temp);
         a2.methodA(1, A.temp);
+        
     }
 }
 
