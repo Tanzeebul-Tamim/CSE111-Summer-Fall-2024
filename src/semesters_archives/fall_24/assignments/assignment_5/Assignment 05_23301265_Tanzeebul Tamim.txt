@@ -21,8 +21,6 @@ public class Song {
     }
 }
 
-package semesters_archives.fall_24.assignments.assignment_5;
-
 public class Playlist {
     public String name;
     
