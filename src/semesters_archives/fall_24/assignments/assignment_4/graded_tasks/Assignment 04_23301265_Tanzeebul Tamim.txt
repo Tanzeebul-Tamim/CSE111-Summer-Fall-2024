@@ -250,8 +250,7 @@ public class Teacher {
 
     public void addCourse(Course course) {
         if (this.courseCount < this.courses.length) {
-            this.courses[this.courseCount] = course;
-            this.courseCount++;
+            this.courses[this.courseCount++] = course;
         } else {
             System.out.println("Cannot add more than 3 courses.");
         }

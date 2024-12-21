@@ -37,8 +37,7 @@ public class MobilePhone {
             System.out.println("Storage Full!!");
         } else {
             Contact contact = new Contact(name, contactNo + "");
-            this.contactList[contactCount] = contact;
-            contactCount++;
+            this.contactList[this.contactCount++] = contact;
 
             System.out.printf("The contact of %s is added.\n", name);
         }

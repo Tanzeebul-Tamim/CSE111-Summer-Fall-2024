@@ -33,8 +33,7 @@ public class Reader {
 
     public void addBook(String bookName) {
         if (bookCount < capacity) {
-            booksRead[bookCount] = bookName;
-            bookCount++;
+            booksRead[bookCount++] = bookName;
         } else {
             System.out.println("No more space for new book");
         }

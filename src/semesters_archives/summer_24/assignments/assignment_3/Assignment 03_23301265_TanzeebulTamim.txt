@@ -402,8 +402,7 @@ public class Task4 {
 
             if (!alreadyInput) {
                 elemCounts[countUnique][0] = currentElem;
-                elemCounts[countUnique][1] = count;
-                countUnique++;
+                elemCounts[countUnique++][1] = count;
             }
         }
 
@@ -443,8 +442,7 @@ public class Task5 {
         for (int i = 1; i < N; i++) {
             int elem = arr[i];
             if (elem != arr[i - 1]) {
-                arr[writeIndex] = arr[i];
-                writeIndex++;
+                arr[writeIndex++] = arr[i];
             } else {
                 count++;
             }

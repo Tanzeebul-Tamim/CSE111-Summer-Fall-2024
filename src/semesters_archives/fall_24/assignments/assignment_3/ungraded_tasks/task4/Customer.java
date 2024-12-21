@@ -37,8 +37,7 @@ public class Customer {
             System.out.println("Cart is full");
         } else {
             this.items[this.itemCount] = item;
-            this.prices[this.itemCount] = price;
-            this.itemCount++;
+            this.prices[this.itemCount++] = price;
             this.total += price;
 
             if (!this.fourParams) {

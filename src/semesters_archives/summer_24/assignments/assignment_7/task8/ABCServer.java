@@ -41,8 +41,7 @@ public class ABCServer {
             System.out.println("Sorry, maximum capacity exceeded!");
         } else {
             this.members[this.memberCount][0] = name;
-            this.members[this.memberCount][1] = role;
-            this.memberCount++;
+            this.members[this.memberCount++][1] = role;
 
             System.out.printf("%s is added.\n", role);
         }

@@ -11,9 +11,8 @@ public class CellPhone {
     }
 
     public void storeContact(String contact) {
-        if (contactCount < 3) {
-            this.contacts[this.contactCount] = contact;
-            contactCount++;
+        if (this.contactCount < 3) {
+            this.contacts[this.contactCount++] = contact;
             System.out.println("Contact Stored");
         } else {
             System.out.println("Memory full. New contact can't be stored.");

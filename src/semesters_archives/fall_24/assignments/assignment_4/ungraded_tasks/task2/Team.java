@@ -22,8 +22,7 @@ public class Team {
         if (this.playerCount >= this.players.length) {
             System.out.println("No more capacity.");
         } else {
-            this.players[this.playerCount] = player;
-            this.playerCount++;
+            this.players[this.playerCount++] = player;
         }
     }
 

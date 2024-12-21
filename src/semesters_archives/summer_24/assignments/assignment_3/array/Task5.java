@@ -23,8 +23,7 @@ public class Task5 {
             int elem = arr[i];
 
             if (elem != arr[i - 1]) {
-                arr[writeIndex] = arr[i];
-                writeIndex++;
+                arr[writeIndex++] = arr[i];
             } else {
                 count++;
             }

@@ -20,8 +20,7 @@ public class Movie {
 
     public void addActors(String... actors) {
         for (String actor : actors) {
-            this.actors[this.actorCount] = actor;
-            this.actorCount++;
+            this.actors[this.actorCount++] = actor;
             System.out.printf("Added actor \"%s\" to \"%s\".\n", actor, this.title);
         }
     }

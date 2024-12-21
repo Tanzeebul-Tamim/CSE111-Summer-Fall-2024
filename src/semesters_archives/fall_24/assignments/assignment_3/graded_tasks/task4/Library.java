@@ -14,8 +14,7 @@ public class Library {
         if (this.bookCount >= this.capacity) {
             System.out.printf("Maximum capacity exceeds. You can't add more than %d books\n", this.capacity);
         } else {
-            this.books[this.bookCount] = book;
-            this.bookCount++;
+            this.books[this.bookCount++] = book;
             System.out.printf("Book '%s' added to the library\n", book);
         }
     }

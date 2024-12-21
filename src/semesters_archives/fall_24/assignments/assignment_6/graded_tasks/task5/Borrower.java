@@ -69,8 +69,7 @@ public class Borrower {
 
         if (remainingBooks(book) > 0) {
             book_count[bookIdx]--;
-            this.booksBorrowed[this.borrowedBookCount] = book;
-            this.borrowedBookCount++;
+            this.booksBorrowed[this.borrowedBookCount++] = book;
         } else {
             System.out.println("This book is not available.");
         }

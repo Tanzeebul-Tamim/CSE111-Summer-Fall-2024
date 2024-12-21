@@ -43,8 +43,7 @@ public class Exam {
             System.out.println("The exam has already ended.");
         } else {
             if (hasSub < subCount) {
-                topics[hasSub] = topic;
-                hasSub++;
+                topics[hasSub++] = topic;
             } else {
                 System.out.printf("Couldn't add topic %s.\n", topic);
             }

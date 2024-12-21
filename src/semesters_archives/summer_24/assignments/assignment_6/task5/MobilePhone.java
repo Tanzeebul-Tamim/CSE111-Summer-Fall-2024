@@ -26,8 +26,7 @@ public class MobilePhone {
             System.out.println("Storage Full!!");
         } else {
             this.contactList[contactCount][0] = name;
-            this.contactList[contactCount][1] = contactNo + "";
-            contactCount++;
+            this.contactList[contactCount++][1] = contactNo + "";
 
             System.out.printf("The contact of %s is added.\n", name);
         }

@@ -25,8 +25,7 @@ public class Task7 {
             if (elem == arr[i - 1]) {
                 count++;
             } else {
-                arr[writeIndex] = arr[i];
-                writeIndex++;
+                arr[writeIndex++] = arr[i];
             }
         }
 

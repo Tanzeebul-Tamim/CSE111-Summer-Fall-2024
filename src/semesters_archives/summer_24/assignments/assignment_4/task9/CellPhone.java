@@ -60,8 +60,7 @@ public class CellPhone {
 
         if (dataValidation) {
             if (contactCount < 3) {
-                contacts[contactCount] = contact;
-                contactCount++;
+                contacts[contactCount++] = contact;
 
                 System.out.println("Contact Stored");
             } else

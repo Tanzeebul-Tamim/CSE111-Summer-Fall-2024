@@ -36,8 +36,7 @@ public class Cart {
 
             items[itemCount] = item;
             itemNames[itemCount] = item.itemName;
-            itemPrices[itemCount] = item.itemPrice;
-            itemCount++;
+            itemPrices[itemCount++] = item.itemPrice;
 
             System.out.printf("%s added to cart %d.\n", itemName, this.cartNo);
             System.out.printf("You have %d item(s) in your cart now.\n", this.itemCount);

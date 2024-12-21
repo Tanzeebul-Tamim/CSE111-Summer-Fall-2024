@@ -39,8 +39,7 @@ public class Task4 {
 
             if (!alreadyInput) {
                 elemCounts[countUnique][0] = currentElem;
-                elemCounts[countUnique][1] = count;
-                countUnique++;
+                elemCounts[countUnique++][1] = count;
             }
         }
 

@@ -40,8 +40,7 @@ public class Reader {
         if (count >= capacity) {
             System.out.println("No more capacity");
         } else {
-            books[count] = book;
-            count++;
+            books[count++] = book;
         }
     }
 }

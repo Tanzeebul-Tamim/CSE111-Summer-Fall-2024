@@ -37,20 +37,16 @@ public class Task3 {
                 int score = sc.nextInt();
 
                 if (80 <= score && score <= 100) {
-                    gradeA[countA] = score;
-                    countA++;
+                    gradeA[countA++] = score;
                     break;
                 } else if (65 <= score && score < 80) {
-                    gradeB[countB] = score;
-                    countB++;
+                    gradeB[countB++] = score;
                     break;
                 } else if (50 <= score && score < 65) {
-                    gradeC[countC] = score;
-                    countC++;
+                    gradeC[countC++] = score;
                     break;
                 } else if (0 <= score && score < 50) {
-                    gradeF[countF] = score;
-                    countF++;
+                    gradeF[countF++] = score;
                     break;
                 } else {
                     System.out.println(

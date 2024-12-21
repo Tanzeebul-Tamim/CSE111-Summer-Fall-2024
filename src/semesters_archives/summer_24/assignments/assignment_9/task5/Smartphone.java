@@ -50,8 +50,7 @@ public class Smartphone {
                     featureValues[alreadyExistsIdx] = feature_value + ", " + featureValue;
                 } else {
                     featureNames[featureCount] = featureName;
-                    featureValues[featureCount] = featureValue;
-                    featureCount++;
+                    featureValues[featureCount++] = featureValue;
                 }
 
             } else {

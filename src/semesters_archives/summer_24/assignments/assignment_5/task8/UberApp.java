@@ -36,8 +36,7 @@ public class UberApp {
             System.out.printf("Destination : %s\n", destination);
             System.out.printf("Fare: %.1f Taka\n", fare);
 
-            rideHistory[rideCount] = destination;
-            rideCount++;
+            rideHistory[rideCount++] = destination;
         } else {
             System.out.printf("%s, please update your plan to premium or wait till next month!\n", name);
         }

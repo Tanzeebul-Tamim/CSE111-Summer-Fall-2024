@@ -51,9 +51,8 @@ public class MagicItem {
             }
         }
 
-        items[itemCount] = new Item(foundItem, boost);
+        items[itemCount++] = new Item(foundItem, boost);
         System.out.printf("%s found a %s\n", this.characterName, foundItem);
-        itemCount++;
 
     }
 

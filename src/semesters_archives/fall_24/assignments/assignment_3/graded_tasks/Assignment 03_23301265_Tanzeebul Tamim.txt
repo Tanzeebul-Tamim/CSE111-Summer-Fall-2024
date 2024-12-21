@@ -95,8 +95,7 @@ public class Library {
         if (this.bookCount >= this.capacity) {
             System.out.printf("Maximum capacity exceeds. You can't add more than %d books\n", this.capacity);
         } else {
-            this.books[this.bookCount] = book;
-            this.bookCount++;
+            this.books[this.bookCount++] = book;
             System.out.printf("Book '%s' added to the library\n", book);
         }
     }
@@ -132,8 +131,7 @@ public class TaxiLagbe {
         if (this.passengerCount >= 4) {
             System.out.println("Taxi Full! No more passengers can be added");
         } else {
-            this.passengers[this.passengerCount] = name;
-            this.passengerCount++;
+            this.passengers[this.passengerCount++] = name;
             this.totalFare += fare;
             System.out.format("Dear %s! Welcome to TaxiLagbe\n", name);
         }
@@ -258,8 +256,7 @@ public class Cart {
 
             items[itemCount] = item;
             itemNames[itemCount] = item.itemName;
-            itemPrices[itemCount] = item.itemPrice;
-            itemCount++;
+            itemPrices[itemCount++] = item.itemPrice;
 
             System.out.printf("%s added to cart %d.\n", itemName, this.cartNo);
             System.out.printf("You have %d item(s) in your cart now.\n", this.itemCount);
@@ -341,8 +338,7 @@ public class Reader {
         if (count >= capacity) {
             System.out.println("No more capacity");
         } else {
-            books[count] = book;
-            count++;
+            books[count++] = book;
         }
     }
 }

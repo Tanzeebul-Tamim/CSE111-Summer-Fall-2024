@@ -36,8 +36,7 @@ public class Student {
                 System.out.printf("Failed to add %s\n", course);
                 System.out.println("Maximum 4 courses allowed.");
             } else {
-                this.courses[this.courseCount] = course;
-                this.courseCount++;
+                this.courses[this.courseCount++] = course;
             }
         }
     }

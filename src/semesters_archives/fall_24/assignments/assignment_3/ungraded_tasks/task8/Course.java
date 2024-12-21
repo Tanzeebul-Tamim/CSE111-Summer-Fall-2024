@@ -19,8 +19,7 @@ public class Course {
 
     public void addContent(String content) {
         if (contentCount < 4) {
-            syllabus[contentCount] = content;
-            contentCount++;
+            syllabus[contentCount++] = content;
             System.out.printf("%s was added.\n", content);
         } else {
             System.out.println("Cannot add more content.");

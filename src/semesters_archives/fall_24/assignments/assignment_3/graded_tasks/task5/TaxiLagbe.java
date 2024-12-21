@@ -17,8 +17,7 @@ public class TaxiLagbe {
         if (this.passengerCount >= 4) {
             System.out.println("Taxi Full! No more passengers can be added");
         } else {
-            this.passengers[this.passengerCount] = name;
-            this.passengerCount++;
+            this.passengers[this.passengerCount++] = name;
             this.totalFare += fare;
             System.out.format("Dear %s! Welcome to TaxiLagbe\n", name);
         }
