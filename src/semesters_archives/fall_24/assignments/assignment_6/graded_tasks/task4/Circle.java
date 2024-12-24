@@ -9,14 +9,14 @@ public class Circle {
         count++;
     }
 
-    public void setRadius(int radius) {
-        this.radius = radius;
-    }
-
     public double getRadius() {
         return this.radius;
     }
 
+    public void setRadius(int radius) {
+        this.radius = radius;
+    }
+    
     public String area() {
         return "\n" + (Math.PI * Math.pow(radius, 2));
     }

@@ -2,8 +2,8 @@ package semesters_archives.fall_24.assignments.assignment_6.graded_tasks.task1;
 
 public class Product {
     private String name;
-    private double price;
     private int quantity;
+    private double price;
 
     public Product() {
         this("Unknown", 0);
@@ -45,6 +45,18 @@ public class Product {
         }
     }
 
+    public String getName() {
+        return this.name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getQuantity() {
+        return this.quantity;
+    }
+
     public void setQuantity(int quantity) {
         this.quantity = quantity;
     }
@@ -53,7 +65,7 @@ public class Product {
         return this.price;
     }
 
-    public int getQuantity() {
-        return this.quantity;
+    public void setPrice(double price) {
+        this.price = price;
     }
 }
