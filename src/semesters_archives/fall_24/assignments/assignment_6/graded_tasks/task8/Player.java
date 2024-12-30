@@ -5,23 +5,23 @@ public class Player {
     private static int max_players;
     private static Player[] players;
 
-    private String name;
-    private String country;
-    private int jerseyNo;
-
     static {
         Player.max_players = 11;
         Player.players = new Player[Player.max_players];
     }
 
-    public Player(String name, String country, int jerseyNo) {
+    private String name;
+    private String country;
+    private int jerseyNo;
+
+    protected Player(String name, String country, int jerseyNo) {
         this.name = name;
         this.country = country;
         this.jerseyNo = jerseyNo;
         Player.players[total++] = this;
     }
 
-    public static void info() {
+    protected static void info() {
         System.out.format("Total number of players: %d\n", total);
         System.out.format("Players enlisted so far: ");
 
@@ -40,7 +40,7 @@ public class Player {
         }
     }
 
-    public String player_detail() {
+    protected String player_detail() {
         String name = "Player Name: " + this.name;
         String jerseyNo = "Jersey Number: " + this.jerseyNo;
         String country = "Country: " + this.country;

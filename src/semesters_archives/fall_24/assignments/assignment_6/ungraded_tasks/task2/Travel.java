@@ -7,33 +7,45 @@ public class Travel {
     private String destination;
     private int time;
 
-    public Travel(String source, String destination) {
+    protected Travel(String source, String destination) {
         this.source = source;
         this.destination = destination;
         this.time = 1;
         count++;
     }
 
-    public static int getCount() {
+    protected static int getCount() {
         return count;
     }
 
-    public void setTime(int time) {
+    protected int getTime() {
+        return this.time;
+    }
+
+    protected void setTime(int time) {
         this.time = time;
     }
 
-    public void setDestination(String destination) {
+    protected String getDestination() {
+        return this.destination;
+    }
+
+    protected void setDestination(String destination) {
         this.destination = destination;
     }
 
-    public void setSource(String source) {
+    protected String getSource() {
+        return this.source;
+    }
+
+    protected void setSource(String source) {
         this.source = source;
     }
 
-    public String displayTravelInfo() {
+    protected String displayTravelInfo() {
         String source = "Source: " + this.source;
         String destination = "Destination: " + this.destination;
-        String time = "Flight Time: " + this.time +":00";
+        String time = "Flight Time: " + this.time + ":00";
         String output = source + "\n" + destination + "\n" + time;
         return output;
     }

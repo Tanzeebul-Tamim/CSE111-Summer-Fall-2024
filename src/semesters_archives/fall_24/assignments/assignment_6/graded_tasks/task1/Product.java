@@ -5,20 +5,20 @@ public class Product {
     private int quantity;
     private double price;
 
-    public Product() {
+    protected Product() {
         this("Unknown", 0);
     }
 
-    public Product(String name, double price) {
+    protected Product(String name, double price) {
         this.name = name;
         this.price = price;
     }
 
-    public void displayInfo() {
+    protected void displayInfo() {
         this.displayInfo(false);
     }
 
-    public void displayInfo(boolean display) {
+    protected void displayInfo(boolean display) {
         String name;
         double price;
         int quantity;
@@ -45,27 +45,27 @@ public class Product {
         }
     }
 
-    public String getName() {
+    protected String getName() {
         return this.name;
     }
 
-    public void setName(String name) {
+    protected void setName(String name) {
         this.name = name;
     }
 
-    public int getQuantity() {
+    protected int getQuantity() {
         return this.quantity;
     }
 
-    public void setQuantity(int quantity) {
+    protected void setQuantity(int quantity) {
         this.quantity = quantity;
     }
 
-    public double getPrice() {
+    protected double getPrice() {
         return this.price;
     }
 
-    public void setPrice(double price) {
+    protected void setPrice(double price) {
         this.price = price;
     }
 }

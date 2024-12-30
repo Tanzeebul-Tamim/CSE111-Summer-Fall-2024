@@ -1,19 +1,19 @@
 package semesters_archives.fall_24.assignments.assignment_6.graded_tasks.task5;
 
 public class Borrower {
-    public static int book_count[] = { 3, 3, 3 };
-    public static String book_name[] = { "Pather Panchali", "Durgesh Nandini", "Anandmath" };
+    protected static int book_count[] = { 3, 3, 3 };
+    protected static String book_name[] = { "Pather Panchali", "Durgesh Nandini", "Anandmath" };
 
     private String name;
     private String[] booksBorrowed;
     private int borrowedBookCount;
 
-    public Borrower(String name) {
+    protected Borrower(String name) {
         this.name = name;
         this.booksBorrowed = new String[book_name.length];
     }
 
-    public static void bookStatus() {
+    protected static void bookStatus() {
         System.out.println("Available Books:");
 
         for (int i = 0; i < book_count.length; i++) {
@@ -24,7 +24,7 @@ public class Borrower {
         }
     }
 
-    public static int remainingBooks(String book) {
+    protected static int remainingBooks(String book) {
         boolean found = false;
         int bookIdx = -1;
 
@@ -45,7 +45,7 @@ public class Borrower {
         }
     }
 
-    public void borrowerDetails() {
+    protected void borrowerDetails() {
         System.out.printf("Name: %s\n", this.name);
         System.out.println("Books Borrowed:");
 
@@ -56,7 +56,7 @@ public class Borrower {
         }
     }
 
-    public void borrowBook(String book) {
+    protected void borrowBook(String book) {
         int bookIdx = -1;
 
         for (String bookName : book_name) {

@@ -1,14 +1,14 @@
 package semesters_archives.fall_24.assignments.assignment_6.graded_tasks.task3;
 
 public class Book {
-    public static int total_books_sold;
-    public static double total_revenue;
+    protected static int total_books_sold;
+    protected static double total_revenue;
 
     private String title;
     private int discount;
     private double price;
 
-    public Book(String title, int discount) {
+    protected Book(String title, int discount) {
         this.title = title;
         this.discount = discount;
         this.price = 150;
@@ -23,7 +23,7 @@ public class Book {
         this.price -= discount;
     }
 
-    public void bookDetails() {
+    protected void bookDetails() {
         System.out.printf("Title: %s\n", this.title);
         System.out.printf("Price after Discount: %.1f TK\n", this.price);
     }

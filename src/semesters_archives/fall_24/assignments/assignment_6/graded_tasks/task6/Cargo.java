@@ -1,31 +1,35 @@
 package semesters_archives.fall_24.assignments.assignment_6.graded_tasks.task6;
 
 public class Cargo {
-    public static int count;
-    private static double capacity = 10;
+    protected static int count;
+    private static double capacity;
+
+    static {
+        Cargo.capacity = 10;
+    }
 
     private String content;
     private double weight;
     private int cargoId;
     private boolean isLoaded;
 
-    public Cargo(String content, double weight) {
+    protected Cargo(String content, double weight) {
         this.content = content;
         this.weight = weight;
         this.cargoId = ++count;
     }
 
-    public static String capacity() {
+    protected static String capacity() {
         String formattedCapacity = String.format("%.1f", capacity);
         return formattedCapacity;
     }
 
-    public void details() {
+    protected void details() {
         System.out.printf("Cargo ID: %d, Contents: %s, Weight: %.1f, Loaded: %b\n", this.cargoId, this.content,
                 this.weight, this.isLoaded);
     }
 
-    public void load() {
+    protected void load() {
         if (capacity > this.weight) {
             this.isLoaded = true;
             capacity -= this.weight;
@@ -36,7 +40,7 @@ public class Cargo {
         }
     }
 
-    public void unload() {
+    protected void unload() {
         this.isLoaded = false;
         capacity += this.weight;
 

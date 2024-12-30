@@ -1,23 +1,23 @@
 package semesters_archives.fall_24.assignments.assignment_6.graded_tasks.task4;
 
 public class Circle {
-    public static int count;
+    protected static int count;
     private int radius;
 
-    public Circle(int radius) {
+    protected Circle(int radius) {
         this.radius = radius;
         count++;
     }
 
-    public double getRadius() {
+    protected double getRadius() {
         return this.radius;
     }
 
-    public void setRadius(int radius) {
+    protected void setRadius(int radius) {
         this.radius = radius;
     }
     
-    public String area() {
+    protected String area() {
         return "\n" + (Math.PI * Math.pow(radius, 2));
     }
 }

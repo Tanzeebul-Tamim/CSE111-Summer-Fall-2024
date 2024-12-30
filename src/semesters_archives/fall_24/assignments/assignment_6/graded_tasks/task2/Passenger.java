@@ -1,15 +1,15 @@
 package semesters_archives.fall_24.assignments.assignment_6.graded_tasks.task2;
 
 public class Passenger {
-    public static int no_of_passenger;
-    public static double total_fare;
+    protected static int no_of_passenger;
+    protected static double total_fare;
 
     private String name;
     private double distance;
     private double baggage;
     private double fare;
 
-    public Passenger(String name, double distance) {
+    protected Passenger(String name, double distance) {
         this.name = name;
         this.distance = distance;
         this.fare = calculateFare(this.distance);
@@ -17,7 +17,7 @@ public class Passenger {
         no_of_passenger++;
     }
 
-    public void storeBaggageWeight(double baggage) {
+    protected void storeBaggageWeight(double baggage) {
         total_fare -= this.fare;
         this.baggage = baggage;
         this.fare = calculateFare(this.distance, this.baggage);
@@ -32,7 +32,7 @@ public class Passenger {
         return distance * 20 + baggage * 10;
     }
 
-    public void passengerDetails() {
+    protected void passengerDetails() {
         System.out.printf("Name: %s\n", this.name);
         System.out.printf("Fare: %.1f TK\n", this.fare);
     }

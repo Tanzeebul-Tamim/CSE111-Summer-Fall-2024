@@ -9,11 +9,11 @@ public class Student {
     private double cgpa;
     private String department;
 
-    public Student(String name, double cgpa) {
+    protected Student(String name, double cgpa) {
         this(name, cgpa, "CSE");
     }
 
-    public Student(String name, double cgpa, String department) {
+    protected Student(String name, double cgpa, String department) {
         this.id = ++totalStudent;
         this.name = name;
         this.cgpa = cgpa;
@@ -24,7 +24,7 @@ public class Student {
         }
     }
 
-    public static void printDetails() {
+    protected static void printDetails() {
         int otherDeptStudents = totalStudent - cseStudent;
 
         System.out.printf("Total Student(s): %d\n", totalStudent);
@@ -32,7 +32,7 @@ public class Student {
         System.out.printf("Other Department Student(s): %d\n", otherDeptStudents);
     }
 
-    public void individualDetail() {
+    protected void individualDetail() {
         String formattedCgpa = String.format("%.2f", this.cgpa);
 
         if (formattedCgpa.endsWith(".00")) {
