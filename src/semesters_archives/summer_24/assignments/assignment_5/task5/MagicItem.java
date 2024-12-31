@@ -18,8 +18,6 @@ public class MagicItem {
 
     public void newCharacter(String characterName) {
         this.characterName = characterName;
-        this.energyLevel = 0;
-        this.itemCount = 0;
         items = new Item[3];
     }
 

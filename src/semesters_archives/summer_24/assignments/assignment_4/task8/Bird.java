@@ -1,8 +1,8 @@
 package semesters_archives.summer_24.assignments.assignment_4.task8;
 
 public class Bird {
-    public String name = null;
-    private int height = 0;
+    public String name;
+    private int height;
 
     public void flyUp(int height) {
         System.out.printf("%s has flown up %d feet.\n", name, height);

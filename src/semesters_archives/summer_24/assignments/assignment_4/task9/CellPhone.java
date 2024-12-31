@@ -3,7 +3,7 @@ package semesters_archives.summer_24.assignments.assignment_4.task9;
 public class CellPhone {
     public String model = "unknown";
     public String[] contacts = new String[3];
-    private int contactCount = 0;
+    private int contactCount;
 
     private boolean validateData(String contact) {
         boolean hyphenFound = false;

@@ -1,8 +1,8 @@
 package semesters_archives.summer_24.assignments.assignment_5.task2;
 
 public class Dog {
-    private String name = null;
-    private String color = null;
+    private String name;
+    private String color;
 
     public void changeName(String name) {
         this.name = name;
