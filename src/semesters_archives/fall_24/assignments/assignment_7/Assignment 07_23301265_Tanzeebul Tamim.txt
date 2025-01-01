@@ -1,0 +1,321 @@
+// TASK 1
+
+public class BBAStudent extends Student {
+    public BBAStudent() {
+        this("Default");
+    }
+
+    public BBAStudent(String name) {
+        setName(name);
+        setDepartment("BBA");
+    }
+}
+
+
+// TASK 2
+
+public class CheckingAccount extends Account {
+    public static int count;
+
+    public CheckingAccount() {
+        this(count);
+    }
+
+    public CheckingAccount(double balance) {
+        super(balance);
+        count++;
+    }
+}
+
+
+// TASK 3
+
+public class Dog extends Animal {
+    private String breed;
+
+    public Dog(String name, int age, String color, String breed) {
+        super(name, age, color);
+        this.breed = breed;
+    }
+
+    @Override
+    public void makeSound() {
+        System.out.printf("%s color %s is barking\n", this.color, this.name);
+    }
+
+    @Override
+    public String info() {
+        return super.info() + "Breed: " + this.breed;
+    }
+}
+
+public class Cat extends Animal {
+    private String breed;
+
+    public Cat(String name, int age, String color, String breed) {
+        super(name, age, color);
+        this.breed = breed;
+    }
+
+    @Override
+    public void makeSound() {
+        System.out.printf("%s color %s is meowing\n", this.color, this.name);
+    }
+
+    @Override
+    public String info() {
+        return super.info() + "Breed: " + this.breed;
+    }
+}
+
+
+// TASK 4
+
+public class Vehicle2010 extends Vehicle {
+    public void position() {
+        System.out.printf("(%d, %d)\n", this.x, this.y);
+    }
+
+    public void moveUpperRight() {
+        moveUp();
+        moveRight();
+    }
+
+    public void moveLowerRight() {
+        moveDown();
+        moveRight();
+    }
+
+    public void moveLowerLeft() {
+        moveDown();
+        moveLeft();
+    }
+}
+
+
+// TASK 5
+
+public class ComplexNumber extends RealNumber {
+    public double complexValue;
+
+    public ComplexNumber() {
+        this(1.0, 1.0);
+    }
+
+    public ComplexNumber(double realValue, double complexValue) {
+        super(realValue);
+        this.complexValue = complexValue;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + "\nImaginary Part: " + complexValue;
+    }
+}
+
+
+// TASK 6
+
+public class Manager extends Employee {
+    private int bonus;
+    private double finalSalary;
+
+    public Manager(String name, double baseSalary, int hoursWorked, int bonus) {
+        super(name, baseSalary, hoursWorked);
+        this.bonus = bonus;
+    }
+
+    public void calculateSalary() {
+        int hoursWorked = this.getHoursWorked();
+        double baseSalary = this.getBaseSalary();
+
+        if (hoursWorked > 40) {
+            this.finalSalary = baseSalary + baseSalary * this.bonus / 100;
+        }
+    }
+
+    @Override
+    public void displayInfo() {
+        super.displayInfo();
+        System.out.printf("Bonus: %.1f %%\n", (double) this.bonus);
+        System.out.printf("Final Salary: $%.1f\n", this.finalSalary);
+    }
+
+    public void requestIncrement(double amount) {
+        int hoursWorked = this.getHoursWorked();
+        amount = hoursWorked > 100 ? amount : hoursWorked > 80 ? amount / 2 : 0;
+
+        if (amount == 0) {
+            System.out.println("Increment denied.");
+        } else {
+            double baseSalary = this.getBaseSalary();
+            this.setBaseSalary(baseSalary + amount);
+            System.out.printf("$%.0f Increment approved.\n", amount);
+        }
+    }
+}
+
+public class Developer extends Employee {
+    private String language;
+    private double finalSalary;
+
+    public Developer(String name, double baseSalary, int hoursWorked, String language) {
+        super(name, baseSalary, hoursWorked);
+        this.language = language;
+        this.finalSalary = this.getBaseSalary();
+    }
+
+    public void calculateSalary() {
+        finalSalary = this.language.equals("Java") ? finalSalary += 700 : finalSalary;
+    }
+
+    @Override
+    public void displayInfo() {
+        super.displayInfo();
+        System.out.printf("Language: %s\n", this.language);
+        System.out.printf("Final Salary: $%.1f\n", this.finalSalary);
+    }
+}
+
+
+// TASK 7
+
+public class CinemexTicket extends MovieTicket {
+    private static int ticketCount;
+
+    private String genre;
+    private String id;
+    private boolean paid;
+
+    public CinemexTicket(String movie, String showTime, String genre, String date) {
+        this(movie, showTime, genre, date, seatTypes[0]);
+    }
+
+    public CinemexTicket(String movie, String showtime, String genre, String date, String seat) {
+        super(movie, date, showtime, getSeatPrice(seat));
+        ticketCount++;
+
+        this.seat = seat;
+        this.genre = genre;
+        this.id = generateID();
+    }
+
+    private static double getSeatPrice(String seat) {
+        double seatPrice = -1;
+
+        for (int i = 0; i < seatTypes.length; i++) {
+            String seatType = seatTypes[i];
+            seatPrice = seatPrices[i];
+
+            if (seat.equals(seatType)) {
+                break;
+            }
+        }
+
+        return seatPrice;
+    }
+
+    public static int getTotalTickets() {
+        return ticketCount;
+    }
+
+    public void calculateTicketPrice() {
+        try {
+            int showtime = Integer.parseInt(this.showtime.split(":")[0]);
+
+            if (18 <= showtime && showtime <= 23) {
+                double price = this.getPrice();
+                price += price * 15 / 100;
+                this.setPrice(price);
+            }
+
+            System.out.println("Ticket price is calculated successfully.");
+        } catch (NumberFormatException err) {
+            System.out.println("Invalid Time!");
+        }
+    }
+
+    public String confirmPayment() {
+        String output = this.paid ? "Ticket price is already paid!" : "Payment Successful.";
+        this.paid = true;
+        return output;
+    }
+
+    private String generateID() {
+        String movie = this.getMovie();
+        char seatInitial = this.seat.charAt(0);
+        return movie + "-" + seatInitial + "-" + ticketCount;
+    }
+
+    @Override
+    public String toString() {
+        String ticketID = "Ticket ID: " + this.id + "\n";
+        String genre = "\nGenre: " + this.genre;
+        String seatType = "\nSeat Type: " + this.seat;
+        String price = "\nPrice(tk): " + String.format("%.1f", this.getPrice());
+        String status = "\nStatus: " + (this.paid ? "Paid" : "Not Paid");
+
+        return ticketID + super.toString() + genre + seatType + price + status;
+    }
+}
+
+
+// TASK 8
+
+public class KKTea extends Tea {
+    protected static int totalSales;
+    private static int regularSales;
+
+    private int weight;
+    private int teaBagCount;
+
+    public KKTea(int price, int teaBagCount) {
+        this(null, price, teaBagCount);
+    }
+
+    public KKTea(String flavor, int price, int teaBagCount) {
+        super(getName(flavor), price);
+        this.weight = 2 * teaBagCount;
+        this.teaBagCount = teaBagCount;
+    }
+
+    private static String getName(String flavor) {
+        flavor = flavor == null ? "Regular" : flavor;
+        return "KK " + flavor + " Tea";
+    }
+
+    @Override
+    public void productDetail() {
+        super.productDetail();
+        System.out.println("Weight: " + this.weight + ", Tea Bags: " + this.teaBagCount);
+    }
+
+    public static void totalSales() {
+        System.out.printf("Total Sales: %d\n", totalSales);
+        System.out.printf("KK Regular Tea: %d\n", regularSales);
+
+        int flavoredSales = totalSales - regularSales;
+
+        if (flavoredSales > 0) {
+            System.out.printf("KK Flavored Tea: %d\n", flavoredSales);
+        }
+    }
+
+    public static void updateSoldStatusRegular(KKTea tea) {
+        tea.status = true;
+        totalSales++;
+        regularSales++;
+    }
+}
+
+public class KKFlavouredTea extends KKTea {
+    public KKFlavouredTea(String flavor, int price, int teaBagCount) {
+        super(flavor, price, teaBagCount);
+    }
+
+    public static void updateSoldStatusFlavoured(KKFlavouredTea tea) {
+        tea.status = true;
+        totalSales++;
+    }
+}
+
