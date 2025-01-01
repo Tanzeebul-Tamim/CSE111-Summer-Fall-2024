@@ -7,6 +7,43 @@ package semesters_archives.fall_24.quiz.lab_quiz.quiz_4;
 
     Output:
     
+    A vehicle has been created
+    1-----------------------
+    Garage Name: The Parking Spot
+    Total Vehicles: 0
+    Cars:
+    Bikes:
+    2-----------------------
+    3-----------------------
+    Car no 123-XYZ has been parked!
+    Bike no 567-MPH has been parked!
+    4-----------------------
+    Garage Name: The Parking Spot
+    Total Vehicles: 2
+    Cars:
+    Number: 123-XYZ, Brand: Toyota
+    Bikes:
+    Number: 567-MPH, Brand: Yamaha
+    5-----------------------
+    Car no 281-WRH has been parked!
+    No more space!
+    6-----------------------
+    Garage Name: The Parking Spot
+    Total Vehicles: 3
+    Cars:
+    Number: 123-XYZ, Brand: Toyota
+    Number: 281-WRH, Brand: Honda
+    Bikes:
+    Number: 567-MPH, Brand: Yamaha
+    7-----------------------
+    Car no 281-WRH has left the garage!
+    8-----------------------
+    Garage Name: The Parking Spot
+    Total Vehicles: 2
+    Cars:
+    Number: 123-XYZ, Brand: Toyota
+    Bikes:
+    Number: 567-MPH, Brand: Yamaha
  */
 
 public class Tester2 {
