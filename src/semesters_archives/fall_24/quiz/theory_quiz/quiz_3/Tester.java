@@ -12,6 +12,32 @@ package semesters_archives.fall_24.quiz.theory_quiz.quiz_3;
     Carefully observe the following driver code and expected output to design the two classes.
 
     Note: You do not need to write additional getter() & setter() methods.
+
+    Output:
+    House:3, Banani, Dhaka-1212
+    1 ----------------
+    New Person created.
+    Name: Mohammad Ali
+    Present Address:
+    House:3, Banani, Dhaka-1212
+    Permanent Address:
+    34, Kaptai Road, Chattogram-4347
+    2 ----------------
+    Updating zipcode requires a city name.
+    34, Kaptai Road, Chattogram-4347
+    3 ----------------
+    Name: Mohammad Ali
+    Present Address:
+    House:3, Banani, Dhaka-1212
+    Permanent Address:
+    Shahid Saifuddin Khaled Rd, Chattogram-4000
+    4 ----------------
+    Mohammad Ali lives in Dhaka
+    Mohammad Ali is from Chattogram
+    5 ----------------
+    Updated Area.
+    House:7, Banani, Dhaka-1212
+    6 ----------------
  */
 
 public class Tester {
