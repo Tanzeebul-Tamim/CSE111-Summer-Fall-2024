@@ -56,9 +56,25 @@ public class Person {
     }
 
     public void showDetail() {
-        System.out.printf("Name: %s Age: %d Type: %s\n", this.name, this.age, this.type);
+        System.out.printf("Name: %s Age: %d Type: %s\n",
+                this.name,
+                this.age,
+                this.type);
+
         System.out.printf("Vaccine name: %s\n", this.vaccine.getName());
-        System.out.printf("1st dose: %s\n", this.dosageCount >= 1 ? "Given" : "Not given");
-        System.out.printf("2nd dose: %s\n", this.dosageCount > 1 ? "Given" : "Please come after 60 days");
+
+        System.out.printf("1st dose: %s\n",
+                this.dosageCount >= 1
+                        ? "Given"
+                        : "Not given");
+
+        System.out.printf("2nd dose: %s\n",
+                this.dosageCount > 1
+                        ? "Given"
+                        : "Please come after "
+                                + (this.vaccine.getName().equalsIgnoreCase("Moderna")
+                                        ? 30
+                                        : 60)
+                                + " days");
     }
 }
