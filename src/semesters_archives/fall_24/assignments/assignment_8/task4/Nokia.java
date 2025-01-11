@@ -17,17 +17,20 @@ public class Nokia extends Mobile {
         String output;
 
         if (this.simCardStatus) {
-            if (this.balance == 0) {
+            if (this.balance <= 0) {
                 output = "Insufficient balance! Please recharge.";
                 return output;
             } else {
-                char firstDigit = contactNo.charAt(0);
-                String country = firstDigit == '8'
-                        ? "Bangladesh"
-                        : firstDigit == '4'
-                                ? "USA"
-                                : "";
-                output = country.isEmpty()
+                String countryCode = "";
+
+                for (int i = 0; i < 3; i++) {
+                    char digit = contactNo.charAt(i);
+                    countryCode += digit;
+                }
+
+                String country = this.getCountryName(countryCode);
+
+                output = country == null
                         ? "Dialing is not allowed in this region."
                         : "Dialing the number " + contactNo + " to " + country + " region.";
 
