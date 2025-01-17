@@ -1,4 +1,4 @@
-package semesters_archives.summer_24.term_exams.mid_term.oop;
+package semesters_archives.summer_24.mid_term.oop;
 
 /*
     You are building a system to simulate the process of creating and managing an examination.

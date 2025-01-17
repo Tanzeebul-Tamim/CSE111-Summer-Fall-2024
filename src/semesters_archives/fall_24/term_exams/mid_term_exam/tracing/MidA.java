@@ -1,4 +1,4 @@
-package semesters_archives.fall_24.term_exams.mid_term.tracing;
+package semesters_archives.fall_24.term_exams.mid_term_exam.tracing;
 
 public class MidA {
     public int temp = 3, z = 2, sum;

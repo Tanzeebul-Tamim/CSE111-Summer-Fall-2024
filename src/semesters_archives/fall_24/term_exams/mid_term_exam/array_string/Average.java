@@ -1,4 +1,4 @@
-package semesters_archives.fall_24.term_exams.mid_term.array_string;
+package semesters_archives.fall_24.term_exams.mid_term_exam.array_string;
 
 import java.util.Scanner;
 

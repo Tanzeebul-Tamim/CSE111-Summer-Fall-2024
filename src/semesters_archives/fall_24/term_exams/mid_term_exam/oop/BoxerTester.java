@@ -1,4 +1,4 @@
-package semesters_archives.fall_24.term_exams.mid_term.oop;
+package semesters_archives.fall_24.term_exams.mid_term_exam.oop;
 
 /*
     Design a class called Boxer With appropriate attributes and features so that the driver code below generates the expected output.

@@ -1,4 +1,4 @@
-package semesters_archives.summer_24.term_exams.mid_term.arrays_strings;
+package semesters_archives.summer_24.mid_term.arrays_strings;
 
 /*
     You are given an array of strings each containing a mix of letters, special characters, and digits. You need to write a Java program that calculates the sum of the digits contained in each string and output the largest sum along with the string that it came from.

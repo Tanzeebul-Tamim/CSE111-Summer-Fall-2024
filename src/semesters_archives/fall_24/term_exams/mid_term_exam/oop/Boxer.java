@@ -1,4 +1,4 @@
-package semesters_archives.fall_24.term_exams.mid_term.oop;
+package semesters_archives.fall_24.term_exams.mid_term_exam.oop;
 
 public class Boxer {
     private String name;
