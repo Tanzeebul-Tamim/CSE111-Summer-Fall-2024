@@ -12,6 +12,67 @@ The repository is organized into the following sections:
 - **Exercise Solutions**: Solutions to exercises provided during lectures and practice sessions.
 - **Lecture Notes and Files**: Includes lecture notes, files, and solutions used during the classes/lectures to conduct and support the teaching process.
 
+## 📁 Content Directory Structure
+
+```
+CSE111-Summer-Fall-2024/
+├── .gitignore
+├── LICENSE
+├── README.md
+└── src/
+    ├── random_solves/                                  # Some random problem-solving files
+    └── semesters_archives/
+        ├── fall_24/
+        │   ├── assignments/
+        │   │   ├── assignment_1/
+        │   │   │   ├── <Assignment_Name>.pdf           # PDF of the assignment question
+        │   │   │   ├── graded_tasks/                   
+        │   │   │   │   ├── <Task_File>.java            # Java task file submissions (graded)
+        │   │   │   │   │
+        │   │   │   │   └── ...                         # Other Java task files (graded)
+        │   │   │   │
+        │   │   │   └── ungraded_tasks/                 
+        │   │   │       ├── <Task_File>.java            # Java task file submissions (ungraded)
+        │   │   │       │
+        │   │   │       └── ...                         # Other Java task files (ungraded)
+        │   │   │
+        │   │   └── ...                                 # Other assignment folders (similar structure as "assignment_1" folder)
+        │   │
+        │   ├── class_notes/                            
+        │   │   ├── class_1/                            # Java files for specific topics discussed in class                    
+        │   │   │
+        │   │   └── ...                                 # Other lecture folders (similar structure as "class_1" folder)
+        │   │
+        │   ├── quiz/
+        │   │   ├── lab_quiz/
+        │   │   │   ├── quiz_1/                         # Lab quiz 1 folder
+        │   │   │   │   ├── <Quiz_Question_File>.java   # Java file for solving quiz question
+        │   │   │   │   │
+        │   │   │   │   └─ ...                          # Other Java quiz files
+        │   │   │   │
+        │   │   │   └─ ...                              # Other lab quiz folders (similar structure as "quiz_1" folder)
+        │   │   │   
+        │   │   └── theory_quiz/                        # (similar structure as "lab_quiz" folder)
+        │   │       │
+        │   │       └── ... 
+        │   │
+        │   └── term_exams/                             
+        │       ├── final_exam/                         
+        │       │   ├── <Final_Question_File>.pdf       # PDF file for the final exam questions
+        │       │   └── <Quiz_Question_File>.java       # Java file for solution of the term exam questions
+        │       └── mid_term_exam/                      # Midterm exam folder
+        │           │
+        │           └── ...                             # (similar structure as "final_exam" folder)
+        │
+        └── summer_24/                                  
+            │
+            └── ...                                    # (similar structure as "fall_24" folder)
+
+```
+
+
+---
+
 ## How to Use
 
 Navigate to the respective folders based on the content. Within each folder, you'll find detailed explanations for the tasks.
