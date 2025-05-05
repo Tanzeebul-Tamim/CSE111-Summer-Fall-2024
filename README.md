@@ -27,3 +27,7 @@ To clone this repository to your local machine, use the following command:
 ```sh
 git clone https://github.com/Tanzeebul-Tamim/CSE111-Summer-Fall-2024.git
 ```
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
